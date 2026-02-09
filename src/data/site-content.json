@@ -1,374 +1,350 @@
 {
-    "brand": {
-        "name": "Express Book Publishers",
-        "logo": "Express Book Publishers",
-        "tagline": "Your Path to Bestselling Success",
-        "contact": {
-            "email": "info@expressbookpublishers.com",
-            "phone": "+1 323 916 8192",
-            "addresses": [
-                "1504 5th St Sacramento, CA 95814, USA",
-                "24 Adelaide St WToronto, ON M5H 1L6, Canada"
-            ],
-            "workingHours": "Working Round The Clock"
-        },
-        "social": {
-            "facebook": "#",
-            "twitter": "#",
-            "instagram": "#",
-            "linkedin": "#"
-        }
+  "brand": {
+    "name": "Express Book Publishers",
+    "logo": "Express Book Publishers",
+    "tagline": "Your Path to Bestselling Success",
+    "contact": {
+      "email": "info@expressbookpublishers.com",
+      "phone": "+1 323 916 8192",
+      "addresses": ["1504 5th St Sacramento, CA 95814, USA", "24 Adelaide St WToronto, ON M5H 1L6, Canada"],
+      "workingHours": "Working Round The Clock"
     },
-    "navigation": [
-        {
-            "name": "Home",
-            "path": "/"
-        },
-        {
-            "name": "About Us",
-            "path": "/about-us"
-        },
-        {
-            "name": "Case Studies",
-            "path": "/case-studies"
-        },
-        {
-            "name": "Services",
-            "path": "/services",
-            "subItems": [
-                {
-                    "name": "Ghostwriting",
-                    "path": "/services/ghostwriting"
-                },
-                {
-                    "name": "Editing",
-                    "path": "/services/editing"
-                },
-                {
-                    "name": "Formatting",
-                    "path": "/services/formatting"
-                },
-                {
-                    "name": "Book Publishing",
-                    "path": "/services/book-publishing"
-                },
-                {
-                    "name": "Children's Book",
-                    "path": "/services/childrens-book"
-                },
-                {
-                    "name": "Book Marketing",
-                    "path": "/services/book-marketing"
-                },
-                {
-                    "name": "Proofreading",
-                    "path": "/services/proofreading"
-                },
-                {
-                    "name": "Book Cover Design",
-                    "path": "/services/book-cover-design"
-                },
-                {
-                    "name": "Book Printing",
-                    "path": "/services/book-printing"
-                }
-            ]
-        },
-        {
-            "name": "Contact Us",
-            "path": "/contact-us"
-        },
-        {
-            "name": "Testimonials",
-            "path": "/testimonials"
-        }
-    ],
-    "pages": {
-        "home": {
-            "hero": {
-                "title": "Get Captivating Ghostwriting & Book Writing Services with Up to 75% Savings!",
-                "subtitle": "The successful publishing dream that allows for the seamless transition from manuscript to completion!",
-                "description": "Exceptional Book Writing Services!",
-                "cta": "Get Started",
-                "phoneCta": "+1 323 916 8192"
-            },
-            "bookTypes": [
-                {
-                    "title": "E-books",
-                    "description": "Make your book publication available in the digital form comprising of story, text, and images and is convenient to read."
-                },
-                {
-                    "title": "Trade Books",
-                    "description": "A book that is intended and designed for the general public, which a commercial publisher publishes."
-                },
-                {
-                    "title": "Magazines",
-                    "description": "It is a printed or digital published item that consists of articles, stories, and poems, mostly in the form of illustrations."
-                },
-                {
-                    "title": "Photo Books",
-                    "description": "A photo book is mostly found at the coffee tables, comprising the photographs as a means of the overall content."
-                }
-            ],
-            "servicesOverview": {
-                "title": "Our Demanded Services",
-                "description": "Over here you can find the litany of books that have been published successfully by us. This work would not have been possible without our professional ghostwriting",
-                "items": [
-                    {
-                        "title": "Ghostwriting",
-                        "description": "Collaborate with industry-leading experts to bring your vision to life through professionally written manuscripts."
-                    },
-                    {
-                        "title": "Editing",
-                        "description": "Comprehensive manuscript evaluation and editing to enhance clarity, coherence, and impact."
-                    },
-                    {
-                        "title": "Formatting",
-                        "description": "Expert book formatting for both print and digital platforms, ensuring a professional reading experience."
-                    },
-                    {
-                        "title": "Book Publishing",
-                        "description": "A seamless journey from manuscript to global marketplaces with our end-to-end publishing solutions."
-                    },
-                    {
-                        "title": "Children's Book",
-                        "description": "Specialized services for children's literature, including captivating storytelling and vibrant illustrations."
-                    },
-                    {
-                        "title": "Book Marketing",
-                        "description": "Strategic marketing plans designed to build buzz and drive sales through multi-channel promotion."
-                    },
-                    {
-                        "title": "Proofreading",
-                        "description": "Meticulous proofreading to catch every error and ensure your book is polished to perfection."
-                    },
-                    {
-                        "title": "Book Cover Design",
-                        "description": "Visually striking cover designs that capture the essence of your story and command attention."
-                    },
-                    {
-                        "title": "Book Printing",
-                        "description": "Flexible and high-quality printing options, from on-demand to bulk orders, delivered worldwide."
-                    }
-                ]
-            },
-            "ghostwritingExpertise": {
-                "title": "Do you require the expertise of professional ghostwriting services from people who double as the leaders of the industry?",
-                "subtitle": "Mark your legacy with the words of our experts, the best eBook ghostwriting services as well as the best book writers the industry has seen to date. We allow for the seamless transition from concept to manuscript to the final product that is put on shelves.",
-                "genres": [
-                    "Fiction",
-                    "Romance",
-                    "Fantasy",
-                    "Children",
-                    "Science",
-                    "Memoirs",
-                    "Religious",
-                    "Comic"
-                ],
-                "professionalLeague": {
-                    "title": "Work with the greatest experts the industry has ever seen",
-                    "description": "Collaborate with a league of ghostwriters that far exceed the level of expertise and experience of any other organization in this entire literary industry. Our top-notch book editors for hire and professional ghostwriting services are so good at ensuring your success that you will have a great chance at becoming a best seller!",
-                    "points": [
-                        "Being published on all online platforms, such as Kindle.",
-                        "An eye-catching cover design.",
-                        "Fast and affordable self-publishing.",
-                        "Additions, revisions, and re-editions!"
-                    ]
-                }
-            },
-            "process": {
-                "title": "Swift work processes, the completion of your work in four efficient steps",
-                "steps": [
-                    {
-                        "step": "step 01",
-                        "title": "Making Your Order",
-                        "description": "When you decide to work with the greatest ghostwriters in the industry. You make your order. After which the processes of writing and working on your project commence in earnest, the work of our ghostwriters is immense and requires a strict attention to detail."
-                    },
-                    {
-                        "step": "step 02",
-                        "title": "The Process of drafting the first Outline",
-                        "description": "It’s important to have a mind map of the plot and the story beats to ensure a smooth experience in writing the book and making sure that no delays happen which is why our writers first work on building an outline."
-                    },
-                    {
-                        "step": "step 03",
-                        "title": "Gaining your feedback",
-                        "description": "Upon completion of the tasks, we have a sit down with you so we can discuss everything pertaining to the final product to gain feedback from you and discuss your satisfaction as well. It’s important to us that you feel that justice was done to your vision."
-                    },
-                    {
-                        "step": "step 04",
-                        "title": "The Delivery of your work",
-                        "description": "One of the best qualities of our professional ghostwriters is the timely delivery of work, our writers can deliver it before the deadline in most cases. This is just one of many great aspects of our ghostwriting agency, only the best is selected to work at our team!"
-                    }
-                ]
-            },
-            "marketingDetail": {
-                "title": "Market your book with the best ghostwriting agency!",
-                "description": "Our marketing team is leaps and bounds ahead of any digital marketing team, it’s the result of a generations worth of expertise and experience creating a professional unit that can handle any marketing task thrown at them.",
-                "features": [
-                    "Video Trailer",
-                    "Audio Book",
-                    "Book Cover Designing",
-                    "Author Website",
-                    "Book Publishing",
-                    "Social Media Marketing",
-                    "Book Translation",
-                    "Marketing Consultation",
-                    "Amazon Marketing",
-                    "Barnes & Noble Nook Edition"
-                ]
-            },
-            "faqs": {
-                "title": "Frequently Asked Questions",
-                "items": [
-                    {
-                        "question": "What is the Average Cost of a Ghostwriter?",
-                        "answer": "Costs for ghostwriters vary quite a bit depending on the scope of the project and the length of the book as well."
-                    },
-                    {
-                        "question": "What are the Services of a Ghost Writer?",
-                        "answer": "A ghostwriter writes your book and gets paid for it, you maintain all rights to the book whereas the ghostwriter simply gets paid for the service."
-                    },
-                    {
-                        "question": "Do Ghostwriters Write Whole Book?",
-                        "answer": "Usually yes sometimes an author might write a book with an author where both parties write the book together, again this varies a bit."
-                    },
-                    {
-                        "question": "Is it Worth Hiring a Ghost Writer?",
-                        "answer": "It’s absolutely worth it to hire a quality ghostwriter who has the expertise and knowledge to take your ideas to the next level."
-                    },
-                    {
-                        "question": "Can a Ghostwriter Steal a Book?",
-                        "answer": "No, as it is illegal for a ghostwriter to claim the book as their own, a ghostwriter is only someone hired to write a book on the basis that they get paid for the words they wrote."
-                    }
-                ]
-            },
-            "testimonials": {
-                "title": "The testimonials of all our wonderful clients",
-                "description": "Our clients love to express their gratitude for the high-quality work we’ve provided to them. They appreciate the hard work our writers have done.",
-                "reviews": [
-                    {
-                        "name": "Clara Arnold",
-                        "text": "I have no words to express the services I received from Express Book Publishers. I got their ghostwriting service, and they left me amazed. I am very much impressed by their work!"
-                    },
-                    {
-                        "name": "Johnson Henry",
-                        "text": "By the time I have started working with Express Book Publishers, I am very much at ease. This team works round the clock and never gives you a reason to disappoint."
-                    },
-                    {
-                        "name": "Thomson Lucas",
-                        "text": "Thank you so much, Express Book Publishers, for providing me with the finest book writing services. They have provided me with a complete solution and are looking after each and everything."
-                    },
-                    {
-                        "name": "Lucy Gray",
-                        "text": "Express Book Publishers has provided me with a high-quality service that I am sure couldn’t be found anywhere else at such a reasonable cost. Thank you to the entire team for being so proficient in the work and providing me with ease."
-                    },
-                    {
-                        "name": "Henry John",
-                        "text": "The entire team at Express Book Publishers is a pleasure to work with. They won't disappoint you at any point and will make sure to provide you with their full support till the end."
-                    }
-                ]
-            },
-            "legacyCTA": {
-                "limited": "Limited Slots!",
-                "title": "WRITE YOUR LEGACY",
-                "subtitle": "DON'T MISS THIS ONCE IN A LIFETIME OFFER!"
-            },
-            "caseStudies": {
-                "title": "Success Stories That Define Excellence",
-                "description": "Explore our portfolio of published works! From unforgettable novels to groundbreaking business guides, our work speaks for our commitment to quality.",
-                "items": [
-                    {
-                        "title": "Business Excellence",
-                        "author": "James Anderson",
-                        "description": "Book Prime Publishing turned my rough draft into a polished masterpiece. The editing team was incredibly detailed, and the cover design perfectly captured the essence of my business book.",
-                        "services": [
-                            "Editing",
-                            "Cover Design"
-                        ]
-                    },
-                    {
-                        "title": "Holding the Dream",
-                        "author": "Sarah Mitchell",
-                        "description": "They handled everything from formatting to distribution with such professionalism. Holding my printed novel for the first time was a dream come true, thanks to them.",
-                        "services": [
-                            "Formatting",
-                            "Distribution"
-                        ]
-                    },
-                    {
-                        "title": "The Strategic Growth",
-                        "author": "Daniel Carter",
-                        "description": "The marketing strategies suggested were a game-changer. Not only did they help me publish, but they also guided me on how to reach the right audience.",
-                        "services": [
-                            "Marketing Strategy",
-                            "Consultation"
-                        ]
-                    },
-                    {
-                        "title": "The Manuscript Journey",
-                        "author": "Emily Roberts",
-                        "description": "I was amazed at how quickly they turned my manuscript into a live book available worldwide. The communication was prompt, and they met every deadline.",
-                        "services": [
-                            "Manuscript Polish",
-                            "Global Reach"
-                        ]
-                    }
-                ]
-            }
-        },
-        "about": {
-            "hero": {
-                "title": "We provide the finest ghostwriting services",
-                "subtitle": "Work with a team of brilliant ghostwriters, exceptional creative designers and marketeers who will bring life to your projects and ensure your success in whichever industry you work in!",
-                "cta": "Get Started"
-            },
-            "guide": {
-                "title": "In your journey as an author we will be your guide",
-                "description": "Every masterpiece begins with a single brave step. The job of our ghostwriters is to bring about your success, they do this by taking your vision and bridging the gap between your vision and the words that are eventually etched on to the pages or the websites that you choose to create. We are simply the conveyors of your message with one small difference, the way we convey your message is with eloquently written words that mesmerize whomever your audience might be."
-            },
-            "stats": {
-                "title": "That Makes Us Proud",
-                "description": "Our experts' experience work is exemplary, which is why the client comes to us. We stand confident in sharing our attainments with you, which clearly portrays the quality of our work and clients' trust in our service.",
-                "items": [
-                    {
-                        "value": "12+",
-                        "label": "Years of experience"
-                    },
-                    {
-                        "value": "18k",
-                        "label": "Books Written"
-                    },
-                    {
-                        "value": "450+",
-                        "label": "Books Internationally Acclaimed"
-                    },
-                    {
-                        "value": "750+",
-                        "label": "Native Writers"
-                    }
-                ]
-            },
-            "contactCTA": {
-                "title": "Don’t Hesitate To Contact Us! We Are Working Round The Clock",
-                "subtitle": "If you need to contact us at any time of the day, don’t hesitate to contact our representatives.",
-                "cta": "Get Started"
-            }
-        },
-        "contact": {
-            "hero": {
-                "title": "Witness Excellence by Working with the top Industry Specialists",
-                "subtitle": "Your dream of becoming a successful author is our mission. Therefore, don’t stay back; get ahold of us today.",
-                "cta": "Get Started"
-            },
-            "form": {
-                "title": "We Would Love To Serve You",
-                "description": "Our team of professionals is at your service round the clock. Don’t hesitate to approach us because we make things happen for our customers, and we would love to be your partner in making you a successful author. Fill in the details, and let our representatives contact you.",
-                "formAction": "/api/contact"
-            }
-        },
-        "services": {
-            "title": "Our Services",
-            "list": []
-        }
+    "social": {
+      "facebook": "#",
+      "twitter": "#",
+      "instagram": "#",
+      "linkedin": "#"
     }
+  },
+  "navigation": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "About Us",
+      "path": "/about-us"
+    },
+    {
+      "name": "Case Studies",
+      "path": "/case-studies"
+    },
+    {
+      "name": "Services",
+      "path": "/services",
+      "subItems": [
+        {
+          "name": "Ghostwriting",
+          "path": "/services/ghostwriting"
+        },
+        {
+          "name": "Editing",
+          "path": "/services/editing"
+        },
+        {
+          "name": "Formatting",
+          "path": "/services/formatting"
+        },
+        {
+          "name": "Book Publishing",
+          "path": "/services/book-publishing"
+        },
+        {
+          "name": "Children's Book",
+          "path": "/services/childrens-book"
+        },
+        {
+          "name": "Book Marketing",
+          "path": "/services/book-marketing"
+        },
+        {
+          "name": "Proofreading",
+          "path": "/services/proofreading"
+        },
+        {
+          "name": "Book Cover Design",
+          "path": "/services/book-cover-design"
+        },
+        {
+          "name": "Book Printing",
+          "path": "/services/book-printing"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "path": "/contact-us"
+    },
+    {
+      "name": "Testimonials",
+      "path": "/testimonials"
+    }
+  ],
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "Get Captivating Ghostwriting & Book Writing Services with Up to 75% Savings!",
+        "subtitle": "The successful publishing dream that allows for the seamless transition from manuscript to completion!",
+        "description": "Exceptional Book Writing Services!",
+        "cta": "Get Started",
+        "phoneCta": "+1 323 916 8192"
+      },
+      "bookTypes": [
+        {
+          "title": "E-books",
+          "description": "Make your book publication available in the digital form comprising of story, text, and images and is convenient to read."
+        },
+        {
+          "title": "Trade Books",
+          "description": "A book that is intended and designed for the general public, which a commercial publisher publishes."
+        },
+        {
+          "title": "Magazines",
+          "description": "It is a printed or digital published item that consists of articles, stories, and poems, mostly in the form of illustrations."
+        },
+        {
+          "title": "Photo Books",
+          "description": "A photo book is mostly found at the coffee tables, comprising the photographs as a means of the overall content."
+        }
+      ],
+      "servicesOverview": {
+        "title": "Our Demanded Services",
+        "description": "Over here you can find the litany of books that have been published successfully by us. This work would not have been possible without our professional ghostwriting",
+        "items": [
+          {
+            "title": "Ghostwriting",
+            "description": "Collaborate with industry-leading experts to bring your vision to life through professionally written manuscripts."
+          },
+          {
+            "title": "Editing",
+            "description": "Comprehensive manuscript evaluation and editing to enhance clarity, coherence, and impact."
+          },
+          {
+            "title": "Formatting",
+            "description": "Expert book formatting for both print and digital platforms, ensuring a professional reading experience."
+          },
+          {
+            "title": "Book Publishing",
+            "description": "A seamless journey from manuscript to global marketplaces with our end-to-end publishing solutions."
+          },
+          {
+            "title": "Children's Book",
+            "description": "Specialized services for children's literature, including captivating storytelling and vibrant illustrations."
+          },
+          {
+            "title": "Book Marketing",
+            "description": "Strategic marketing plans designed to build buzz and drive sales through multi-channel promotion."
+          },
+          {
+            "title": "Proofreading",
+            "description": "Meticulous proofreading to catch every error and ensure your book is polished to perfection."
+          },
+          {
+            "title": "Book Cover Design",
+            "description": "Visually striking cover designs that capture the essence of your story and command attention."
+          },
+          {
+            "title": "Book Printing",
+            "description": "Flexible and high-quality printing options, from on-demand to bulk orders, delivered worldwide."
+          }
+        ]
+      },
+      "ghostwritingExpertise": {
+        "title": "Do you require the expertise of professional ghostwriting services from people who double as the leaders of the industry?",
+        "subtitle": "Mark your legacy with the words of our experts, the best eBook ghostwriting services as well as the best book writers the industry has seen to date. We allow for the seamless transition from concept to manuscript to the final product that is put on shelves.",
+        "genres": ["Fiction", "Romance", "Fantasy", "Children", "Science", "Memoirs", "Religious", "Comic"],
+        "professionalLeague": {
+          "title": "Work with the greatest experts the industry has ever seen",
+          "description": "Collaborate with a league of ghostwriters that far exceed the level of expertise and experience of any other organization in this entire literary industry. Our top-notch book editors for hire and professional ghostwriting services are so good at ensuring your success that you will have a great chance at becoming a best seller!",
+          "points": [
+            "Being published on all online platforms, such as Kindle.",
+            "An eye-catching cover design.",
+            "Fast and affordable self-publishing.",
+            "Additions, revisions, and re-editions!"
+          ]
+        }
+      },
+      "process": {
+        "title": "Swift work processes, the completion of your work in four efficient steps",
+        "steps": [
+          {
+            "step": "step 01",
+            "title": "Making Your Order",
+            "description": "When you decide to work with the greatest ghostwriters in the industry. You make your order. After which the processes of writing and working on your project commence in earnest, the work of our ghostwriters is immense and requires a strict attention to detail."
+          },
+          {
+            "step": "step 02",
+            "title": "The Process of drafting the first Outline",
+            "description": "It’s important to have a mind map of the plot and the story beats to ensure a smooth experience in writing the book and making sure that no delays happen which is why our writers first work on building an outline."
+          },
+          {
+            "step": "step 03",
+            "title": "Gaining your feedback",
+            "description": "Upon completion of the tasks, we have a sit down with you so we can discuss everything pertaining to the final product to gain feedback from you and discuss your satisfaction as well. It’s important to us that you feel that justice was done to your vision."
+          },
+          {
+            "step": "step 04",
+            "title": "The Delivery of your work",
+            "description": "One of the best qualities of our professional ghostwriters is the timely delivery of work, our writers can deliver it before the deadline in most cases. This is just one of many great aspects of our ghostwriting agency, only the best is selected to work at our team!"
+          }
+        ]
+      },
+      "marketingDetail": {
+        "title": "Market your book with the best ghostwriting agency!",
+        "description": "Our marketing team is leaps and bounds ahead of any digital marketing team, it’s the result of a generations worth of expertise and experience creating a professional unit that can handle any marketing task thrown at them.",
+        "features": [
+          "Video Trailer",
+          "Audio Book",
+          "Book Cover Designing",
+          "Author Website",
+          "Book Publishing",
+          "Social Media Marketing",
+          "Book Translation",
+          "Marketing Consultation",
+          "Amazon Marketing",
+          "Barnes & Noble Nook Edition"
+        ]
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "What is the Average Cost of a Ghostwriter?",
+            "answer": "Costs for ghostwriters vary quite a bit depending on the scope of the project and the length of the book as well."
+          },
+          {
+            "question": "What are the Services of a Ghost Writer?",
+            "answer": "A ghostwriter writes your book and gets paid for it, you maintain all rights to the book whereas the ghostwriter simply gets paid for the service."
+          },
+          {
+            "question": "Do Ghostwriters Write Whole Book?",
+            "answer": "Usually yes sometimes an author might write a book with an author where both parties write the book together, again this varies a bit."
+          },
+          {
+            "question": "Is it Worth Hiring a Ghost Writer?",
+            "answer": "It’s absolutely worth it to hire a quality ghostwriter who has the expertise and knowledge to take your ideas to the next level."
+          },
+          {
+            "question": "Can a Ghostwriter Steal a Book?",
+            "answer": "No, as it is illegal for a ghostwriter to claim the book as their own, a ghostwriter is only someone hired to write a book on the basis that they get paid for the words they wrote."
+          }
+        ]
+      },
+      "testimonials": {
+        "title": "The testimonials of all our wonderful clients",
+        "description": "Our clients love to express their gratitude for the high-quality work we’ve provided to them. They appreciate the hard work our writers have done.",
+        "reviews": [
+          {
+            "name": "Clara Arnold",
+            "text": "I have no words to express the services I received from Express Book Publishers. I got their ghostwriting service, and they left me amazed. I am very much impressed by their work!"
+          },
+          {
+            "name": "Johnson Henry",
+            "text": "By the time I have started working with Express Book Publishers, I am very much at ease. This team works round the clock and never gives you a reason to disappoint."
+          },
+          {
+            "name": "Thomson Lucas",
+            "text": "Thank you so much, Express Book Publishers, for providing me with the finest book writing services. They have provided me with a complete solution and are looking after each and everything."
+          },
+          {
+            "name": "Lucy Gray",
+            "text": "Express Book Publishers has provided me with a high-quality service that I am sure couldn’t be found anywhere else at such a reasonable cost. Thank you to the entire team for being so proficient in the work and providing me with ease."
+          },
+          {
+            "name": "Henry John",
+            "text": "The entire team at Express Book Publishers is a pleasure to work with. They won't disappoint you at any point and will make sure to provide you with their full support till the end."
+          }
+        ]
+      },
+      "legacyCTA": {
+        "limited": "Limited Slots!",
+        "title": "WRITE YOUR LEGACY",
+        "subtitle": "DON'T MISS THIS ONCE IN A LIFETIME OFFER!"
+      },
+      "caseStudies": {
+        "title": "Success Stories That Define Excellence",
+        "description": "Explore our portfolio of published works! From unforgettable novels to groundbreaking business guides, our work speaks for our commitment to quality.",
+        "items": [
+          {
+            "title": "Business Excellence",
+            "author": "James Anderson",
+            "description": "Book Prime Publishing turned my rough draft into a polished masterpiece. The editing team was incredibly detailed, and the cover design perfectly captured the essence of my business book.",
+            "services": ["Editing", "Cover Design"]
+          },
+          {
+            "title": "Holding the Dream",
+            "author": "Sarah Mitchell",
+            "description": "They handled everything from formatting to distribution with such professionalism. Holding my printed novel for the first time was a dream come true, thanks to them.",
+            "services": ["Formatting", "Distribution"]
+          },
+          {
+            "title": "The Strategic Growth",
+            "author": "Daniel Carter",
+            "description": "The marketing strategies suggested were a game-changer. Not only did they help me publish, but they also guided me on how to reach the right audience.",
+            "services": ["Marketing Strategy", "Consultation"]
+          },
+          {
+            "title": "The Manuscript Journey",
+            "author": "Emily Roberts",
+            "description": "I was amazed at how quickly they turned my manuscript into a live book available worldwide. The communication was prompt, and they met every deadline.",
+            "services": ["Manuscript Polish", "Global Reach"]
+          }
+        ]
+      }
+    },
+    "about": {
+      "hero": {
+        "title": "We provide the finest ghostwriting services",
+        "subtitle": "Work with a team of brilliant ghostwriters, exceptional creative designers and marketeers who will bring life to your projects and ensure your success in whichever industry you work in!",
+        "cta": "Get Started"
+      },
+      "guide": {
+        "title": "In your journey as an author we will be your guide",
+        "description": "Every masterpiece begins with a single brave step. The job of our ghostwriters is to bring about your success, they do this by taking your vision and bridging the gap between your vision and the words that are eventually etched on to the pages or the websites that you choose to create. We are simply the conveyors of your message with one small difference, the way we convey your message is with eloquently written words that mesmerize whomever your audience might be."
+      },
+      "stats": {
+        "title": "That Makes Us Proud",
+        "description": "Our experts' experience work is exemplary, which is why the client comes to us. We stand confident in sharing our attainments with you, which clearly portrays the quality of our work and clients' trust in our service.",
+        "items": [
+          {
+            "value": "12+",
+            "label": "Years of experience"
+          },
+          {
+            "value": "18k",
+            "label": "Books Written"
+          },
+          {
+            "value": "450+",
+            "label": "Books Internationally Acclaimed"
+          },
+          {
+            "value": "750+",
+            "label": "Native Writers"
+          }
+        ]
+      },
+      "contactCTA": {
+        "title": "Don’t Hesitate To Contact Us! We Are Working Round The Clock",
+        "subtitle": "If you need to contact us at any time of the day, don’t hesitate to contact our representatives.",
+        "cta": "Get Started"
+      }
+    },
+    "contact": {
+      "hero": {
+        "title": "Witness Excellence by Working with the top Industry Specialists",
+        "subtitle": "Your dream of becoming a successful author is our mission. Therefore, don’t stay back; get ahold of us today.",
+        "cta": "Get Started"
+      },
+      "form": {
+        "title": "We Would Love To Serve You",
+        "description": "Our team of professionals is at your service round the clock. Don’t hesitate to approach us because we make things happen for our customers, and we would love to be your partner in making you a successful author. Fill in the details, and let our representatives contact you.",
+        "formAction": "/api/contact"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "list": []
+    }
+  }
 }

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -101,123 +101,193 @@ import Autobiography10 from '../assets/autobiography/autobiography-10.webp';
 import Autobiography11 from '../assets/autobiography/autobiography-11.webp';
 import Autobiography12 from '../assets/autobiography/autobiography-12.webp';
 
-const categories = ["Fiction", "Novels", "Adventure", "Children's Book", "Christian", "Non-Fiction", "Autobiography"];
+const categories = ['Fiction', 'Novels', 'Adventure', "Children's Book", 'Christian', 'Non-Fiction', 'Autobiography'];
 
 const galleryData = {
-    "Fiction": [
-        Fiction01, Fiction02, Fiction03, Fiction04,
-        Fiction05, Fiction06, Fiction07, Fiction08,
-        Fiction09, Fiction10, Fiction11, Fiction12
-    ],
-    "Novels": [
-        Novels01, Novels02, Novels03, Novels04,
-        Novels05, Novels06, Novels07, Novels08,
-        Novels09, Novels10, Novels11, Novels12
-    ],
-    "Adventure": [
-        Adventure01, Adventure02, Adventure03, Adventure04,
-        Adventure05, Adventure06, Adventure07, Adventure08,
-        Adventure09, Adventure10, Adventure11, Adventure12
-    ],
-    "Children's Book": [
-        Children01, Children02, Children03, Children04,
-        Children05, Children06, Children07, Children08,
-        Children09, Children10, Children11, Children12
-    ],
-    "Christian": [
-        Christian01, Christian02, Christian03, Christian04,
-        Christian05, Christian06, Christian07, Christian08,
-        Christian09, Christian10, Christian11, Christian12
-    ],
-    "Non-Fiction": [
-        NonFiction01, NonFiction02, NonFiction03, NonFiction04,
-        NonFiction05, NonFiction06, NonFiction07, NonFiction08,
-        NonFiction09, NonFiction10, NonFiction11, NonFiction12
-    ],
-    "Autobiography": [
-        Autobiography01, Autobiography02, Autobiography03, Autobiography04,
-        Autobiography05, Autobiography06, Autobiography07, Autobiography08,
-        Autobiography09, Autobiography10, Autobiography11, Autobiography12
-    ]
+  Fiction: [
+    Fiction01,
+    Fiction02,
+    Fiction03,
+    Fiction04,
+    Fiction05,
+    Fiction06,
+    Fiction07,
+    Fiction08,
+    Fiction09,
+    Fiction10,
+    Fiction11,
+    Fiction12,
+  ],
+  Novels: [
+    Novels01,
+    Novels02,
+    Novels03,
+    Novels04,
+    Novels05,
+    Novels06,
+    Novels07,
+    Novels08,
+    Novels09,
+    Novels10,
+    Novels11,
+    Novels12,
+  ],
+  Adventure: [
+    Adventure01,
+    Adventure02,
+    Adventure03,
+    Adventure04,
+    Adventure05,
+    Adventure06,
+    Adventure07,
+    Adventure08,
+    Adventure09,
+    Adventure10,
+    Adventure11,
+    Adventure12,
+  ],
+  "Children's Book": [
+    Children01,
+    Children02,
+    Children03,
+    Children04,
+    Children05,
+    Children06,
+    Children07,
+    Children08,
+    Children09,
+    Children10,
+    Children11,
+    Children12,
+  ],
+  Christian: [
+    Christian01,
+    Christian02,
+    Christian03,
+    Christian04,
+    Christian05,
+    Christian06,
+    Christian07,
+    Christian08,
+    Christian09,
+    Christian10,
+    Christian11,
+    Christian12,
+  ],
+  'Non-Fiction': [
+    NonFiction01,
+    NonFiction02,
+    NonFiction03,
+    NonFiction04,
+    NonFiction05,
+    NonFiction06,
+    NonFiction07,
+    NonFiction08,
+    NonFiction09,
+    NonFiction10,
+    NonFiction11,
+    NonFiction12,
+  ],
+  Autobiography: [
+    Autobiography01,
+    Autobiography02,
+    Autobiography03,
+    Autobiography04,
+    Autobiography05,
+    Autobiography06,
+    Autobiography07,
+    Autobiography08,
+    Autobiography09,
+    Autobiography10,
+    Autobiography11,
+    Autobiography12,
+  ],
 };
 
 export default function BookGallery() {
-    const [activeCategory, setActiveCategory] = useState("Fiction");
+  const [activeCategory, setActiveCategory] = useState('Fiction');
 
-    return (
-        <section className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-            <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                    <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2rem, 5vw, 3rem)', color: 'var(--primary)', marginBottom: '1rem' }}>
-                        Our Recent Work
-                    </h2>
-                    <p style={{ maxWidth: '600px', margin: '0 auto', color: 'var(--text-muted)' }}>
-                        Explore our portfolio of published books across various genres.
-                    </p>
-                </div>
+  return (
+    <section className='section' style={{ backgroundColor: 'var(--bg-secondary)' }}>
+      <div className='container'>
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <h2
+            style={{
+              fontFamily: 'var(--font-serif)',
+              fontSize: 'clamp(2rem, 5vw, 3rem)',
+              color: 'var(--primary)',
+              marginBottom: '1rem',
+            }}
+          >
+            Our Recent Work
+          </h2>
+          <p style={{ maxWidth: '600px', margin: '0 auto', color: 'var(--text-muted)' }}>
+            Explore our portfolio of published books across various genres.
+          </p>
+        </div>
 
-                {/* Tabs */}
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
-                    {categories.map((cat) => (
-                        <button
-                            key={cat}
-                            onClick={() => setActiveCategory(cat)}
-                            style={{
-                                padding: '0.8rem 1.5rem',
-                                borderRadius: '50px',
-                                border: 'none',
-                                cursor: 'pointer',
-                                fontSize: '1rem',
-                                fontWeight: 600,
-                                transition: 'all 0.3s ease',
-                                backgroundColor: activeCategory === cat ? 'var(--primary)' : 'white',
-                                color: activeCategory === cat ? 'white' : 'var(--text-muted)',
-                                boxShadow: activeCategory === cat ? '0 5px 15px rgba(0,0,0,0.2)' : '0 2px 5px rgba(0,0,0,0.05)'
-                            }}
-                        >
-                            {cat}
-                        </button>
-                    ))}
-                </div>
+        {/* Tabs */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '3rem' }}>
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              style={{
+                padding: '0.8rem 1.5rem',
+                borderRadius: '50px',
+                border: 'none',
+                cursor: 'pointer',
+                fontSize: '1rem',
+                fontWeight: 600,
+                transition: 'all 0.3s ease',
+                backgroundColor: activeCategory === cat ? 'var(--primary)' : 'white',
+                color: activeCategory === cat ? 'white' : 'var(--text-muted)',
+                boxShadow: activeCategory === cat ? '0 5px 15px rgba(0,0,0,0.2)' : '0 2px 5px rgba(0,0,0,0.05)',
+              }}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
 
-                {/* Grid */}
-                <motion.div
-                    layout
-                    style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-                        gap: '2rem'
-                    }}
-                >
-                    <AnimatePresence mode='popLayout'>
-                        {galleryData[activeCategory as keyof typeof galleryData].map((img, idx) => (
-                            <motion.div
-                                key={`${activeCategory}-${idx}`}
-                                layout
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.8 }}
-                                transition={{ duration: 0.3 }}
-                                style={{
-                                    borderRadius: '1rem',
-                                    overflow: 'hidden',
-                                    boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
-                                    aspectRatio: '2/3',
-                                    position: 'relative'
-                                }}
-                            >
-                                <Image
-                                    src={img}
-                                    alt={`${activeCategory} Book ${idx + 1}`}
-                                    fill
-                                    style={{ objectFit: 'cover' }}
-                                    sizes="(max-width: 768px) 50vw, 33vw"
-                                />
-                            </motion.div>
-                        ))}
-                    </AnimatePresence>
-                </motion.div>
-            </div>
-        </section>
-    );
+        {/* Grid */}
+        <motion.div
+          layout
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+            gap: '2rem',
+          }}
+        >
+          <AnimatePresence mode='popLayout'>
+            {galleryData[activeCategory as keyof typeof galleryData].map((img, idx) => (
+              <motion.div
+                key={`${activeCategory}-${idx}`}
+                layout
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3 }}
+                style={{
+                  borderRadius: '1rem',
+                  overflow: 'hidden',
+                  boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
+                  aspectRatio: '2/3',
+                  position: 'relative',
+                }}
+              >
+                <Image
+                  src={img}
+                  alt={`${activeCategory} Book ${idx + 1}`}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes='(max-width: 768px) 50vw, 33vw'
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+    </section>
+  );
 }

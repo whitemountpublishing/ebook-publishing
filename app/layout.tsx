@@ -1,22 +1,22 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "White Mount Publishing",
-  description: "Diverse Stories, One Community",
+  title: 'White Mount Publishing',
+  description: 'Diverse Stories, One Community',
 };
 
 export default function RootLayout({
@@ -25,10 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang='en'>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -50,9 +48,17 @@ export default function RootLayout({
             `,
           }}
         />
-        <noscript><a href="https://www.livechat.com/chat-with/19490429/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+        <noscript>
+          <a href='https://www.livechat.com/chat-with/19490429/' rel='nofollow'>
+            Chat with us
+          </a>
+          , powered by{' '}
+          <a href='https://www.livechat.com/?welcome' rel='noopener nofollow' target='_blank'>
+            LiveChat
+          </a>
+        </noscript>
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17931671428"></script>
+        <script async src='https://www.googletagmanager.com/gtag/js?id=AW-17931671428'></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `

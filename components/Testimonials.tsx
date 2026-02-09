@@ -1,211 +1,134 @@
-"use client";
-import { motion, AnimatePresence } from 'framer-motion';
+'use client';
+import { motion } from 'framer-motion';
 import data from '../src/data/site-content.json';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { ArrowLeftIcon } from 'lucide-react';
 
 export default function Testimonials() {
-    const { testimonials } = data.pages.home;
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [visibleItems, setVisibleItems] = useState(3);
+  const { testimonials } = data.pages.home;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleItems, setVisibleItems] = useState(3);
 
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth < 640) setVisibleItems(1);
-            else if (window.innerWidth < 1024) setVisibleItems(2);
-            else setVisibleItems(3);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    const maxIndex = Math.max(0, testimonials.reviews.length - visibleItems);
-
-    const nextStep = () => {
-        setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) setVisibleItems(1);
+      else if (window.innerWidth < 1024) setVisibleItems(2);
+      else setVisibleItems(3);
     };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-    const prevStep = () => {
-        setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
-    };
+  const maxIndex = Math.max(0, testimonials.reviews.length - visibleItems);
 
-    useEffect(() => {
-        const timer = setInterval(nextStep, 6000);
-        return () => clearInterval(timer);
-    }, [maxIndex]);
+  const nextStep = useCallback(() => {
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  }, [maxIndex]);
 
-    return (
-        <section className="section" style={{ backgroundColor: 'var(--bg-secondary)', overflow: 'hidden', padding: 'var(--section-padding) 0' }}>
-            <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: 'clamp(3rem, 6vw, 5rem)' }}>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="section-title"
-                        style={{ marginBottom: '1.5rem', fontFamily: 'var(--font-serif)', color: 'var(--primary)', fontSize: 'clamp(2.5rem, 5vw, 3.5rem)' }}
-                    >
-                        {testimonials.title}
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        style={{ color: 'var(--text-muted)', maxWidth: '800px', margin: '0 auto', fontSize: 'clamp(1rem, 2.5vw, 1.1rem)', padding: '0 1rem' }}
-                    >
-                        {testimonials.description}
-                    </motion.p>
-                </div>
+  const prevStep = useCallback(() => {
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  }, [maxIndex]);
 
-                <div style={{ position: 'relative', padding: '0 clamp(0px, 5vw, 40px)' }}>
-                    <div style={{ overflow: 'hidden', borderRadius: '2rem' }}>
-                        <motion.div
-                            animate={{ x: `-${currentIndex * (100 / visibleItems)}%` }}
-                            transition={{ type: "spring", stiffness: 200, damping: 30 }}
-                            style={{
-                                display: 'flex',
-                                width: '100%'
-                            }}
-                        >
-                            {testimonials.reviews.map((review, idx) => (
-                                <div
-                                    key={idx}
-                                    style={{
-                                        minWidth: `${100 / visibleItems}%`,
-                                        padding: '0 clamp(0.5rem, 2vw, 1.25rem)',
-                                        boxSizing: 'border-box'
-                                    }}
-                                >
-                                    <div className="card" style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        gap: '2rem',
-                                        border: '1px solid var(--border)',
-                                        padding: 'clamp(2rem, 5vw, 3rem) clamp(1.5rem, 5vw, 2.5rem)',
-                                        boxShadow: '0 10px 40px rgba(0,0,0,0.04)',
-                                        height: '100%',
-                                        backgroundColor: 'white',
-                                        borderRadius: '2rem',
-                                        position: 'relative'
-                                    }}>
-                                        <div style={{
-                                            position: 'absolute',
-                                            top: '1.5rem',
-                                            right: '2rem',
-                                            color: 'var(--accent)',
-                                            fontSize: '3rem',
-                                            lineHeight: 1,
-                                            opacity: 0.2,
-                                            fontFamily: 'var(--font-serif)'
-                                        }}>“</div>
+  useEffect(() => {
+    const timer = setInterval(nextStep, 6000);
+    return () => clearInterval(timer);
+  }, [maxIndex, nextStep]);
 
-                                        <div style={{ display: 'flex', gap: '4px', marginBottom: '-0.5rem' }}>
-                                            {[1, 2, 3, 4, 5].map((s) => (
-                                                <svg key={s} width="16" height="16" viewBox="0 0 20 20" fill="var(--accent)">
-                                                    <path d="M10 1L13 7L19 8L15 13L16 19L10 16L4 19L5 13L1 8L7 7L10 1z" />
-                                                </svg>
-                                            ))}
-                                        </div>
+  return (
+    <section className='section overflow-hidden bg-(--bg-secondary) py-(--section-padding)'>
+      <div className='container'>
+        <div className='mb-[clamp(3rem,6vw,5rem)] text-center'>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className='section-title mb-6 font-(--font-serif) text-[clamp(2.5rem,5vw,3.5rem)] text-(--primary)'
+          >
+            {testimonials.title}
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className='mx-auto max-w-200 px-4 text-[clamp(1rem,2.5vw,1.1rem)] text-(--text-muted)'
+          >
+            {testimonials.description}
+          </motion.p>
+        </div>
 
-                                        <p style={{
-                                            fontSize: 'clamp(1rem, 2.5vw, 1.1rem)',
-                                            color: 'var(--text-main)',
-                                            lineHeight: 1.8,
-                                            flex: 1,
-                                            fontWeight: 500
-                                        }}>
-                                            {review.text}
-                                        </p>
-                                        <div style={{
-                                            borderTop: '1px solid var(--border)',
-                                            paddingTop: '1.5rem',
-                                            fontWeight: 800,
-                                            fontSize: '1rem',
-                                            color: 'var(--primary)',
-                                            fontFamily: 'var(--font-serif)',
-                                            letterSpacing: '0.5px'
-                                        }}>
-                                            — {review.name}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </motion.div>
+        <div className='relative px-[clamp(0px,5vw,40px)]'>
+          <div className='overflow-x-hidden rounded-4xl'>
+            <motion.div
+              animate={{ x: `-${currentIndex * (100 / visibleItems)}%` }}
+              transition={{ type: 'spring', stiffness: 200, damping: 30 }}
+              className='flex w-full gap-4'
+            >
+              {testimonials.reviews.map((review, idx) => (
+                <div
+                  key={idx}
+                  className='box-border px-[clamp(0.5rem,2vw,1.25rem)]'
+                  style={{
+                    minWidth: `calc(100% / ${visibleItems} - 1rem)`,
+                  }}
+                >
+                  <div className='card relative flex h-full flex-col gap-8 rounded-4xl border border-(--border) bg-(--bg-main) p-[clamp(2rem,5vw,3rem)_clamp(1.5rem,5vw,2.5rem)] shadow-[0_10px_40px_rgba(0,0,0,0.04)]'>
+                    <div className='absolute right-8 top-6 font-(--font-serif) text-[3rem] leading-none text-(--accent) opacity-20'>
+                      “
                     </div>
 
-                    {/* Navigation Buttons */}
-                    <button
-                        onClick={prevStep}
-                        style={{
-                            position: 'absolute',
-                            left: '-10px',
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            zIndex: 10,
-                            background: 'white',
-                            border: '1px solid var(--border)',
-                            borderRadius: '50%',
-                            width: '52px',
-                            height: '52px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            cursor: 'pointer',
-                            boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
-                            color: 'var(--primary)',
-                            fontSize: '1.4rem',
-                            transition: 'all 0.2s ease'
-                        }}
-                    >
-                        ←
-                    </button>
-                    <button
-                        onClick={nextStep}
-                        style={{
-                            position: 'absolute',
-                            right: '-10px',
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            zIndex: 10,
-                            background: 'white',
-                            border: '1px solid var(--border)',
-                            borderRadius: '50%',
-                            width: '52px',
-                            height: '52px',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            cursor: 'pointer',
-                            boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
-                            color: 'var(--primary)',
-                            fontSize: '1.4rem',
-                            transition: 'all 0.2s ease'
-                        }}
-                    >
-                        →
-                    </button>
-                </div>
+                    <div className='-mb-2 flex gap-1'>
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <svg key={s} className='h-4 w-4 fill-(--accent)' viewBox='0 0 20 20'>
+                          <path d='M10 1L13 7L19 8L15 13L16 19L10 16L4 19L5 13L1 8L7 7L10 1z' />
+                        </svg>
+                      ))}
+                    </div>
 
-                {/* Dots Navigation */}
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '4rem' }}>
-                    {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
-                        <button
-                            key={idx}
-                            onClick={() => setCurrentIndex(idx)}
-                            style={{
-                                width: currentIndex === idx ? '32px' : '10px',
-                                height: '10px',
-                                borderRadius: '5px',
-                                border: 'none',
-                                background: currentIndex === idx ? 'var(--accent)' : 'var(--border)',
-                                cursor: 'pointer',
-                                transition: 'all 0.3s ease'
-                            }}
-                        />
-                    ))}
+                    <p className='flex-1 text-[clamp(1rem,2.5vw,1.1rem)] font-medium leading-[1.8] text-(--text-main)'>
+                      {review.text}
+                    </p>
+                    <div className='border-t border-(--border) pt-6 text-[1rem] font-extrabold tracking-[0.5px] text-(--text-muted) '>
+                      — {review.name}
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </section>
-    );
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevStep}
+            className='absolute left-[-10px] top-1/2 z-10 flex h-[52px] w-[52px] -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg-main)] text-[1.4rem] text-[var(--primary)] shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-200 ease-out hover:shadow-[0_8px_20px_rgba(0,0,0,0.14)] dark:border-[var(--border-dark)] dark:bg-[var(--bg-main-dark)] dark:text-[var(--primary-light)] dark:shadow-[0_4px_15px_rgba(255,255,255,0.1)] dark:hover:shadow-[0_8px_20px_rgba(255,255,255,0.14)]'
+            aria-label='Previous testimonials'
+          >
+            <ArrowLeftIcon className='h-5 w-5' />
+          </button>
+          <button
+            onClick={nextStep}
+            className='absolute right-[-10px] top-1/2 z-10 flex h-[52px] w-[52px] -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg-main)] text-[1.4rem] text-[var(--primary)] shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-200 ease-out hover:shadow-[0_8px_20px_rgba(0,0,0,0.14)] dark:border-[var(--border-dark)] dark:bg-[var(--bg-main-dark)] dark:text-[var(--primary-light)] dark:shadow-[0_4px_15px_rgba(255,255,255,0.1)] dark:hover:shadow-[0_8px_20px_rgba(255,255,255,0.14)]'
+            aria-label='Next testimonials'
+          >
+            <ArrowLeftIcon className='h-5 w-5 rotate-180' />
+          </button>
+        </div>
+
+        {/* Dots Navigation */}
+        <div className='mt-16 flex justify-center gap-2.5'>
+          {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              className={`h-2.5 rounded-[5px] transition-all duration-300 ease-out ${
+                currentIndex === idx ? 'w-8 bg-[var(--accent)]' : 'w-2.5 bg-[var(--border)]'
+              }`}
+              aria-label={`Go to testimonial ${idx + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
