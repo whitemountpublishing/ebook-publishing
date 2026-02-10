@@ -6,7 +6,10 @@
     "contact": {
       "email": "info@whitemountpublishing.com",
       "phone": "+1 629 400 2799",
-      "addresses": ["108 W 39th Street Ste 1006, New York", "NY 10018 USA"],
+      "addresses": [
+        "108 W 39th Street Ste 1006, New York",
+        "NY 10018 USA"
+      ],
       "workingHours": "Working Round The Clock"
     },
     "social": {
@@ -112,47 +115,36 @@
         "description": "Over here you can find the litany of books that have been published successfully by us. This work would not have been possible without our professional ghostwriting",
         "items": [
           {
-            "title": "Ghostwriting",
-            "description": "Collaborate with industry-leading experts to bring your vision to life through professionally written manuscripts."
+            "title": "Manuscript Evaluation",
+            "description": "We read your manuscript, spot what works, and suggest improvements to make it better."
           },
           {
-            "title": "Editing",
-            "description": "Comprehensive manuscript evaluation and editing to enhance clarity, coherence, and impact."
+            "title": "Professional Editing",
+            "description": "We catch typos and small mistakes. Our editors clean up your book, fixing errors and improving flow."
           },
           {
-            "title": "Formatting",
-            "description": "Expert book formatting for both print and digital platforms, ensuring a professional reading experience."
+            "title": "Custom Cover Design",
+            "description": "Artists from our team always design things to inspire and always draw attention."
           },
           {
-            "title": "Book Publishing",
-            "description": "A seamless journey from manuscript to global marketplaces with our end-to-end publishing solutions."
-          },
-          {
-            "title": "Children's Book",
-            "description": "Specialized services for children's literature, including captivating storytelling and vibrant illustrations."
-          },
-          {
-            "title": "Book Marketing",
-            "description": "Strategic marketing plans designed to build buzz and drive sales through multi-channel promotion."
-          },
-          {
-            "title": "Proofreading",
-            "description": "Meticulous proofreading to catch every error and ensure your book is polished to perfection."
-          },
-          {
-            "title": "Book Cover Design",
-            "description": "Visually striking cover designs that capture the essence of your story and command attention."
-          },
-          {
-            "title": "Book Printing",
-            "description": "Flexible and high-quality printing options, from on-demand to bulk orders, delivered worldwide."
+            "title": "Publishing & Distribution",
+            "description": "We place your book in physical and online stores, handling the technical side so you can focus on your story."
           }
         ]
       },
       "ghostwritingExpertise": {
         "title": "Do you require the expertise of professional ghostwriting services from people who double as the leaders of the industry?",
         "subtitle": "Mark your legacy with the words of our experts, the best eBook ghostwriting services as well as the best book writers the industry has seen to date. We allow for the seamless transition from concept to manuscript to the final product that is put on shelves.",
-        "genres": ["Fiction", "Romance", "Fantasy", "Children", "Science", "Memoirs", "Religious", "Comic"],
+        "genres": [
+          "Fiction",
+          "Romance",
+          "Fantasy",
+          "Children",
+          "Science",
+          "Memoirs",
+          "Religious",
+          "Comic"
+        ],
         "professionalLeague": {
           "title": "Work with the greatest experts the industry has ever seen",
           "description": "Collaborate with a league of ghostwriters that far exceed the level of expertise and experience of any other organization in this entire literary industry. Our top-notch book editors for hire and professional ghostwriting services are so good at ensuring your success that you will have a great chance at becoming a best seller!",
@@ -269,25 +261,37 @@
             "title": "Business Excellence",
             "author": "James Anderson",
             "description": "Book Prime Publishing turned my rough draft into a polished masterpiece. The editing team was incredibly detailed, and the cover design perfectly captured the essence of my business book.",
-            "services": ["Editing", "Cover Design"]
+            "services": [
+              "Editing",
+              "Cover Design"
+            ]
           },
           {
             "title": "Holding the Dream",
             "author": "Sarah Mitchell",
             "description": "They handled everything from formatting to distribution with such professionalism. Holding my printed novel for the first time was a dream come true, thanks to them.",
-            "services": ["Formatting", "Distribution"]
+            "services": [
+              "Formatting",
+              "Distribution"
+            ]
           },
           {
             "title": "The Strategic Growth",
             "author": "Daniel Carter",
             "description": "The marketing strategies suggested were a game-changer. Not only did they help me publish, but they also guided me on how to reach the right audience.",
-            "services": ["Marketing Strategy", "Consultation"]
+            "services": [
+              "Marketing Strategy",
+              "Consultation"
+            ]
           },
           {
             "title": "The Manuscript Journey",
             "author": "Emily Roberts",
             "description": "I was amazed at how quickly they turned my manuscript into a live book available worldwide. The communication was prompt, and they met every deadline.",
-            "services": ["Manuscript Polish", "Global Reach"]
+            "services": [
+              "Manuscript Polish",
+              "Global Reach"
+            ]
           }
         ]
       }

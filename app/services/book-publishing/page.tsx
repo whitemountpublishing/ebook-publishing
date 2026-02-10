@@ -6,6 +6,8 @@ import BgImage from '../../../assets/process-bg.webp';
 import Pattern from '../../../assets/pattern-2.webp';
 import HeroForm from '../../../components/HeroForm';
 import BookGallery from '../../../components/BookGallery';
+import Link from 'next/link';
+import { FileSearch, FilePenLine, Palette, Globe } from 'lucide-react';
 
 export default function BookPublishingPage() {
     const serviceTitle = "Experience Transforming Your Manuscript with Our Expert Book Publishing Services!";
@@ -14,19 +16,23 @@ export default function BookPublishingPage() {
     const features = [
         {
             title: "Manuscript Evaluation",
-            desc: "We read your manuscript, spot what works, and suggest improvements to make it better."
+            desc: "We read your manuscript, spot what works, and suggest improvements to make it better.",
+            icon: FileSearch
         },
         {
             title: "Professional Editing",
-            desc: "We catch typos and small mistakes. Our editors clean up your book, fixing errors and improving flow."
+            desc: "We catch typos and small mistakes. Our editors clean up your book, fixing errors and improving flow.",
+            icon: FilePenLine
         },
         {
             title: "Custom Cover Design",
-            desc: "Artists from our team always design things to inspire and always draw attention."
+            desc: "Artists from our team always design things to inspire and always draw attention.",
+            icon: Palette
         },
         {
             title: "Publishing & Distribution",
-            desc: "We place your book in physical and online stores, handling the technical side so you can focus on your story."
+            desc: "We place your book in physical and online stores, handling the technical side so you can focus on your story.",
+            icon: Globe
         }
     ];
 
@@ -181,8 +187,31 @@ export default function BookPublishingPage() {
                             </p>
                             <div className="grid grid-2" style={{ gap: '2rem' }}>
                                 {features.map((feature, idx) => (
-                                    <div key={idx}>
-                                        <h4 style={{ color: 'var(--accent)', marginBottom: '0.8rem', fontFamily: 'var(--font-serif)' }}>{feature.title}</h4>
+                                    <div key={idx} className="group" style={{
+                                        padding: '1.5rem',
+                                        borderRadius: '1rem',
+                                        backgroundColor: 'var(--bg-secondary)',
+                                        transition: 'all 0.3s ease',
+                                        border: '1px solid transparent'
+                                    }}>
+                                        <div style={{
+                                            display: 'inline-flex',
+                                            padding: '0.75rem',
+                                            borderRadius: '0.75rem',
+                                            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                                            color: 'var(--accent)',
+                                            marginBottom: '1rem'
+                                        }}>
+                                            <feature.icon size={28} strokeWidth={1.5} />
+                                        </div>
+                                        <h4 style={{
+                                            marginBottom: '0.8rem',
+                                            fontFamily: 'var(--font-serif)',
+                                            fontSize: '1.25rem',
+                                            fontWeight: 700
+                                        }} className="text-gradient">
+                                            {feature.title}
+                                        </h4>
                                         <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>{feature.desc}</p>
                                     </div>
                                 ))}
