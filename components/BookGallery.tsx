@@ -289,7 +289,7 @@ export default function BookGallery() {
           </AnimatePresence>
         </motion.div>
         <div className='flex justify-center mt-8'>
-          <GetStartedButton label='Start Your Project' className='px-12' />
+          <GetStartedButton label='Start Your Project' className='px-12 py-3' />
         </div>
       </div>
     </section>

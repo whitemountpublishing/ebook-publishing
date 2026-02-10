@@ -7,7 +7,7 @@ import Logo from '../assets/logo.png';
 import LogoDark from '../assets/logo-dark.png';
 import { useState } from 'react';
 import { useTheme } from 'next-themes';
-import { ChevronDownIcon, MailIcon, PhoneIcon } from 'lucide-react';
+import { ChevronDownIcon, MailIcon, PhoneIcon, XIcon } from 'lucide-react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,8 +45,7 @@ export default function Header() {
               alt={data.brand.name}
               height={30}
               width={100}
-              className='h-12 sm:h-16 w-auto'
-              style={{ objectFit: 'contain' }}
+              className='h-12 sm:h-16 w-auto object-contain'
               priority
             />
           </Link>
@@ -98,13 +97,16 @@ export default function Header() {
       <div className={`mobile-menu ${isOpen ? 'active' : ''}`}>
         <div className='mobile-menu-header'>
           <Link href='/' onClick={() => setIsOpen(false)}>
-            <Image src={Logo} alt={data.brand.name} height={40} width={130} style={{ objectFit: 'contain' }} />
+            <Image
+              src={resolvedTheme === 'dark' ? LogoDark : Logo}
+              alt={data.brand.name}
+              height={40}
+              width={130}
+              className='h-12 sm:h-16 w-auto object-contain'
+            />
           </Link>
           <button className='close-btn' onClick={() => setIsOpen(false)} aria-label='Close Menu'>
-            <svg width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
-              <line x1='18' y1='6' x2='6' y2='18' />
-              <line x1='6' y1='6' x2='18' y2='18' />
-            </svg>
+            <XIcon size={24} />
           </button>
         </div>
         <nav className='mobile-nav'>
@@ -136,7 +138,7 @@ export default function Header() {
               </div>
 
               {item.subItems && activeSubmenu === item.name && (
-                <div className='flex flex-col px-6 pb-2 gap-2 bg-gray-100 rounded-md'>
+                <div className='flex flex-col px-6 pb-2 gap-2 rounded-md'>
                   {item.subItems.map((sub, subIdx) => (
                     <Link
                       key={sub.path}

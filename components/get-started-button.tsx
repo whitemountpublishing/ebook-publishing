@@ -31,7 +31,14 @@ export default function GetStartedButton({ label = 'Get Started', className, chi
 
   return (
     <React.Fragment>
-      <button type='button' className={cn('btn btn-primary', className)} onClick={openDialog}>
+      <button
+        type='button'
+        className={cn(
+          'inline-block px-3 py-4 rounded-lg cursor-pointer text-white bg-(--accent) border-2 border-(--accent)',
+          className,
+        )}
+        onClick={openDialog}
+      >
         {label}
       </button>
 
