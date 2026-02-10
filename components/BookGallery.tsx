@@ -286,7 +286,11 @@ export default function BookGallery() {
               </motion.div>
             ))}
           </AnimatePresence>
+
         </motion.div>
+        <div className="text-center">
+          <button className="btn btn-primary">Start Your Project</button>
+        </div>
       </div>
     </section>
   );
