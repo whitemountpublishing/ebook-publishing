@@ -100,6 +100,7 @@ import Autobiography09 from '../assets/autobiography/autobiography-09.webp';
 import Autobiography10 from '../assets/autobiography/autobiography-10.webp';
 import Autobiography11 from '../assets/autobiography/autobiography-11.webp';
 import Autobiography12 from '../assets/autobiography/autobiography-12.webp';
+import GetStartedButton from './get-started-button';
 
 const categories = ['Fiction', 'Novels', 'Adventure', "Children's Book", 'Christian', 'Non-Fiction', 'Autobiography'];
 
@@ -286,10 +287,9 @@ export default function BookGallery() {
               </motion.div>
             ))}
           </AnimatePresence>
-
         </motion.div>
-        <div className="text-center">
-          <button className="btn btn-primary">Start Your Project</button>
+        <div className='flex justify-center mt-8'>
+          <GetStartedButton label='Start Your Project' className='px-12' />
         </div>
       </div>
     </section>

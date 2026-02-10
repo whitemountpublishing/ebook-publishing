@@ -394,6 +394,20 @@ a {
   transition: var(--transition);
 }
 
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+dialog {
+  opacity: 1;
+  transition: var(--transition);
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
 ul {
   list-style: none;
 }

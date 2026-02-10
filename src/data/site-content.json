@@ -1,14 +1,12 @@
 {
   "brand": {
-    "name": "Express Book Publishers",
-    "logo": "Express Book Publishers",
+    "name": "White MountPublishers",
+    "logo": "White MountPublishers",
     "tagline": "Your Path to Bestselling Success",
     "contact": {
       "email": "info@whitemountpublishing.com",
       "phone": "+1 629 400 2799",
-      "addresses": [
-        "108 W 39th Street Ste 1006, New York, NY 10018 USA"
-      ],
+      "addresses": ["108 W 39th Street Ste 1006, New York, NY 10018 USA"],
       "workingHours": "Working Round The Clock"
     },
     "social": {
@@ -142,16 +140,7 @@
       "ghostwritingExpertise": {
         "title": "Do you require the expertise of professional ghostwriting services from people who double as the leaders of the industry?",
         "subtitle": "Mark your legacy with the words of our experts, the best eBook ghostwriting services as well as the best book writers the industry has seen to date. We allow for the seamless transition from concept to manuscript to the final product that is put on shelves.",
-        "genres": [
-          "Fiction",
-          "Romance",
-          "Fantasy",
-          "Children",
-          "Science",
-          "Memoirs",
-          "Religious",
-          "Comic"
-        ],
+        "genres": ["Fiction", "Romance", "Fantasy", "Children", "Science", "Memoirs", "Religious", "Comic"],
         "professionalLeague": {
           "title": "Work with the greatest experts the industry has ever seen",
           "description": "Collaborate with a league of ghostwriters that far exceed the level of expertise and experience of any other organization in this entire literary industry. Our top-notch book editors for hire and professional ghostwriting services are so good at ensuring your success that you will have a great chance at becoming a best seller!",
@@ -235,23 +224,23 @@
         "reviews": [
           {
             "name": "Clara Arnold",
-            "text": "I have no words to express the services I received from Express Book Publishers. I got their ghostwriting service, and they left me amazed. I am very much impressed by their work!"
+            "text": "I have no words to express the services I received from White MountPublishers. I got their ghostwriting service, and they left me amazed. I am very much impressed by their work!"
           },
           {
             "name": "Johnson Henry",
-            "text": "By the time I have started working with Express Book Publishers, I am very much at ease. This team works round the clock and never gives you a reason to disappoint."
+            "text": "By the time I have started working with White MountPublishers, I am very much at ease. This team works round the clock and never gives you a reason to disappoint."
           },
           {
             "name": "Thomson Lucas",
-            "text": "Thank you so much, Express Book Publishers, for providing me with the finest book writing services. They have provided me with a complete solution and are looking after each and everything."
+            "text": "Thank you so much, White MountPublishers, for providing me with the finest book writing services. They have provided me with a complete solution and are looking after each and everything."
           },
           {
             "name": "Lucy Gray",
-            "text": "Express Book Publishers has provided me with a high-quality service that I am sure couldn’t be found anywhere else at such a reasonable cost. Thank you to the entire team for being so proficient in the work and providing me with ease."
+            "text": "White MountPublishers has provided me with a high-quality service that I am sure couldn’t be found anywhere else at such a reasonable cost. Thank you to the entire team for being so proficient in the work and providing me with ease."
           },
           {
             "name": "Henry John",
-            "text": "The entire team at Express Book Publishers is a pleasure to work with. They won't disappoint you at any point and will make sure to provide you with their full support till the end."
+            "text": "The entire team at White MountPublishers is a pleasure to work with. They won't disappoint you at any point and will make sure to provide you with their full support till the end."
           }
         ]
       },
@@ -268,37 +257,25 @@
             "title": "Business Excellence",
             "author": "James Anderson",
             "description": "Book Prime Publishing turned my rough draft into a polished masterpiece. The editing team was incredibly detailed, and the cover design perfectly captured the essence of my business book.",
-            "services": [
-              "Editing",
-              "Cover Design"
-            ]
+            "services": ["Editing", "Cover Design"]
           },
           {
             "title": "Holding the Dream",
             "author": "Sarah Mitchell",
             "description": "They handled everything from formatting to distribution with such professionalism. Holding my printed novel for the first time was a dream come true, thanks to them.",
-            "services": [
-              "Formatting",
-              "Distribution"
-            ]
+            "services": ["Formatting", "Distribution"]
           },
           {
             "title": "The Strategic Growth",
             "author": "Daniel Carter",
             "description": "The marketing strategies suggested were a game-changer. Not only did they help me publish, but they also guided me on how to reach the right audience.",
-            "services": [
-              "Marketing Strategy",
-              "Consultation"
-            ]
+            "services": ["Marketing Strategy", "Consultation"]
           },
           {
             "title": "The Manuscript Journey",
             "author": "Emily Roberts",
             "description": "I was amazed at how quickly they turned my manuscript into a live book available worldwide. The communication was prompt, and they met every deadline.",
-            "services": [
-              "Manuscript Polish",
-              "Global Reach"
-            ]
+            "services": ["Manuscript Polish", "Global Reach"]
           }
         ]
       }
