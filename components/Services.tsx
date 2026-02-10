@@ -5,17 +5,19 @@ import Link from 'next/link';
 import data from '../src/data/site-content.json';
 import Pattern from '../assets/pattern-2.webp';
 
-import { FileSearch, FilePenLine, Palette, Globe } from 'lucide-react';
+import { FileSearch, FilePenLine, Palette, Globe, PenTool, Megaphone, Printer } from 'lucide-react';
 
 export default function Services() {
     const { servicesOverview } = data.pages.home;
 
     // Map of service titles to their respective icons
     const iconMap = {
-        "Manuscript Evaluation": FileSearch,
-        "Professional Editing": FilePenLine,
-        "Custom Cover Design": Palette,
-        "Publishing & Distribution": Globe,
+        "Ghostwriting": PenTool,
+        "Editing": FilePenLine,
+        "Book Cover Design": Palette,
+        "Book Publishing": Globe,
+        "Book Marketing": Megaphone,
+        "Book Printing": Printer,
     };
 
     return (

@@ -7,8 +7,7 @@
       "email": "info@whitemountpublishing.com",
       "phone": "+1 629 400 2799",
       "addresses": [
-        "108 W 39th Street Ste 1006, New York",
-        "NY 10018 USA"
+        "108 W 39th Street Ste 1006, New York, NY 10018 USA"
       ],
       "workingHours": "Working Round The Clock"
     },
@@ -115,20 +114,28 @@
         "description": "Over here you can find the litany of books that have been published successfully by us. This work would not have been possible without our professional ghostwriting",
         "items": [
           {
-            "title": "Manuscript Evaluation",
-            "description": "We read your manuscript, spot what works, and suggest improvements to make it better."
+            "title": "Ghostwriting",
+            "description": "Have a story but can't find the words? Our professional ghostwriters bring your ideas to life with compelling narrative and authentic voice."
           },
           {
-            "title": "Professional Editing",
+            "title": "Editing",
             "description": "We catch typos and small mistakes. Our editors clean up your book, fixing errors and improving flow."
           },
           {
-            "title": "Custom Cover Design",
+            "title": "Book Cover Design",
             "description": "Artists from our team always design things to inspire and always draw attention."
           },
           {
-            "title": "Publishing & Distribution",
+            "title": "Book Publishing",
             "description": "We place your book in physical and online stores, handling the technical side so you can focus on your story."
+          },
+          {
+            "title": "Book Marketing",
+            "description": "Our strategic marketing campaigns ensure your book reaches the right audience and achieves maximum visibility in the market."
+          },
+          {
+            "title": "Book Printing",
+            "description": "High-quality printing services that turn your digital manuscript into a beautiful, tangible book ready for shelves."
           }
         ]
       },

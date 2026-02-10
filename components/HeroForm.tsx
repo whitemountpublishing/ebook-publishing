@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import data from '../src/data/site-content.json';
 
 interface HeroFormProps {
@@ -8,6 +9,7 @@ interface HeroFormProps {
 }
 
 export default function HeroForm({ defaultService = "" }: HeroFormProps) {
+    const router = useRouter();
     const { servicesOverview } = data.pages.home;
     const [formData, setFormData] = React.useState({
         service: defaultService,
@@ -54,7 +56,7 @@ export default function HeroForm({ defaultService = "" }: HeroFormProps) {
             if (res.ok) {
                 setStatus('success');
                 setFormData({ service: defaultService, name: '', phone: '', email: '' });
-                setTimeout(() => setStatus('idle'), 5000);
+                router.push('/thank-you');
             } else {
                 setStatus('error');
                 setTimeout(() => setStatus('idle'), 5000);

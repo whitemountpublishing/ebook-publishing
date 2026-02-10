@@ -1,9 +1,11 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import data from '../src/data/site-content.json';
 
 export default function ContactForm() {
+    const router = useRouter();
     const { form } = data.pages.contact;
     const { contact } = data.brand;
     const [formData, setFormData] = React.useState({
@@ -35,7 +37,7 @@ export default function ContactForm() {
             if (res.ok) {
                 setStatus('success');
                 setFormData({ name: '', email: '', phone: '', service: '', subject: '', message: '' });
-                setTimeout(() => setStatus('idle'), 5000);
+                router.push('/thank-you');
             } else {
                 setStatus('error');
                 setTimeout(() => setStatus('idle'), 5000);

@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import BgImage from '../../../assets/process-bg.webp';
+import Section2Image from '../../../assets/exceptional-book.webp';
 import Pattern from '../../../assets/pattern-2.webp';
 import HeroForm from '../../../components/HeroForm';
 import BookGallery from '../../../components/BookGallery';
@@ -164,6 +165,12 @@ export default function BookPublishingPage() {
                             >
                                 {serviceSubtitle}
                             </motion.p>
+
+                            <motion.div style={{ marginTop: '2rem' }}>
+                                <Link href="/contact" className="btn btn-primary">
+                                    Get Started Today
+                                </Link>
+                            </motion.div>
                         </motion.div>
 
                         {/* Right Column: Mini Form */}
@@ -173,26 +180,31 @@ export default function BookPublishingPage() {
             </section>
 
             {/* Features Grid */}
-            <section className="section">
+            <section className="section" style={{ overflow: 'hidden' }}>
                 <div className="container">
-                    <div className="grid grid-2" style={{ alignItems: 'center', gap: '4rem', marginBottom: '4rem' }}>
+                    <div className="grid grid-2" style={{ gap: '5rem', marginBottom: '4rem', alignItems: 'stretch' }}>
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
+                            style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
                         >
-                            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.2rem, 5vw, 3rem)', color: 'var(--primary)', marginBottom: '1.5rem' }}>Comprehensive Publishing Solutions</h2>
-                            <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '2.5rem' }}>
+                            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(2.2rem, 5vw, 3rem)', color: 'var(--primary)', marginBottom: '1.5rem', lineHeight: 1.2 }}>Comprehensive Publishing Solutions</h2>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '3rem' }}>
                                 We take the complexity out of publishing. Our distribution network puts your book in the hands of readers worldwide, handling everything from ISBN registration to retail setup.
                             </p>
-                            <div className="grid grid-2" style={{ gap: '2rem' }}>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
                                 {features.map((feature, idx) => (
                                     <div key={idx} className="group" style={{
                                         padding: '1.5rem',
                                         borderRadius: '1rem',
                                         backgroundColor: 'var(--bg-secondary)',
                                         transition: 'all 0.3s ease',
-                                        border: '1px solid transparent'
+                                        border: '1px solid transparent',
+                                        height: '100%',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'flex-start'
                                     }}>
                                         <div style={{
                                             display: 'inline-flex',
@@ -202,27 +214,46 @@ export default function BookPublishingPage() {
                                             color: 'var(--accent)',
                                             marginBottom: '1rem'
                                         }}>
-                                            <feature.icon size={28} strokeWidth={1.5} />
+                                            <feature.icon size={26} strokeWidth={1.5} />
                                         </div>
                                         <h4 style={{
-                                            marginBottom: '0.8rem',
+                                            marginBottom: '0.5rem',
                                             fontFamily: 'var(--font-serif)',
-                                            fontSize: '1.25rem',
-                                            fontWeight: 700
+                                            fontSize: '1.15rem',
+                                            fontWeight: 700,
+                                            lineHeight: 1.3
                                         }} className="text-gradient">
                                             {feature.title}
                                         </h4>
-                                        <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>{feature.desc}</p>
+                                        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>{feature.desc}</p>
                                     </div>
                                 ))}
                             </div>
+
+                            <motion.div>
+                                <button className="btn btn-primary" onClick={() => {
+                                    if (typeof window !== 'undefined' && (window as any).LiveChatWidget) {
+                                        (window as any).LiveChatWidget.call('maximize');
+                                    }
+                                }}>
+                                    Chat Now
+                                </button>
+                            </motion.div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
+                            style={{ position: 'relative', height: '100%', minHeight: '500px' }}
                         >
-                            <Image src={BgImage} alt="Publishing Process" style={{ width: '100%', height: 'auto', borderRadius: '2rem', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }} />
+                            <div style={{ position: 'relative', height: '100%', width: '100%', borderRadius: '2rem', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.1)' }}>
+                                <Image
+                                    src={Section2Image}
+                                    alt="Publishing Process"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            </div>
                         </motion.div>
                     </div>
                 </div>
@@ -273,8 +304,18 @@ export default function BookPublishingPage() {
                                     <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>{step.desc}</p>
                                 </div>
                             </motion.div>
+
                         ))}
                     </div>
+                    <motion.div style={{ marginTop: '2rem' }}>
+                        <button className="btn btn-primary" onClick={() => {
+                            if (typeof window !== 'undefined' && (window as any).LiveChatWidget) {
+                                (window as any).LiveChatWidget.call('maximize');
+                            }
+                        }}>
+                            Chat Now
+                        </button>
+                    </motion.div>
                 </div>
             </section>
 
