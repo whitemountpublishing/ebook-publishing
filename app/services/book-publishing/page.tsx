@@ -9,6 +9,8 @@ import HeroForm from '../../../components/HeroForm';
 import BookGallery from '../../../components/BookGallery';
 import Link from 'next/link';
 import { FileSearch, FilePenLine, Palette, Globe } from 'lucide-react';
+import GetStartedButton from '@/components/get-started-button';
+import { ChatNowButton } from '@/components/chat-now-button';
 
 export default function BookPublishingPage() {
     const serviceTitle = "Experience Transforming Your Manuscript with Our Expert Book Publishing Services!";
@@ -280,6 +282,11 @@ export default function BookPublishingPage() {
                             </motion.div>
                         ))}
                     </div>
+                    <div className='flex items-center flex-wrap justify-center gap-4 mt-8'>
+                        <GetStartedButton label='Get Started Now' className='px-12 py-4 text-lg min-w-50' />
+                        <ChatNowButton className='px-12 py-4 text-lg min-w-50 bg-(--primary)' />
+                    </div>
+
                 </div>
             </section>
 
