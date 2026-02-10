@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { ThemeProvider } from '@/components/ThemeToggle';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -17,6 +18,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'White Mount Publishing',
   description: 'Diverse Stories, One Community',
+  icons: [
+    {
+      rel: 'icon',
+      url: '/favicon-dark.ico',
+      media: '(prefers-color-scheme: dark)',
+    },
+    {
+      rel: 'icon',
+      url: '/favicon.ico',
+      media: '(prefers-color-scheme: light)',
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -25,18 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-                document.documentElement.setAttribute('data-theme', theme);
-              })()
-            `,
-          }}
-        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -70,9 +73,11 @@ export default function RootLayout({
             `,
           }}
         />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider attribute='class' defaultTheme='light' disableTransitionOnChange enableColorScheme>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
