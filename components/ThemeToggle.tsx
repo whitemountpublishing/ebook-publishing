@@ -3,10 +3,10 @@
 import { ThemeProvider as NextThemesProvider, useTheme } from 'next-themes';
 
 export default function ThemeToggle() {
-  const { setTheme, theme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
+    const newTheme = resolvedTheme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
   };
 
@@ -29,7 +29,7 @@ export default function ThemeToggle() {
       }}
       aria-label='Toggle Theme'
     >
-      {theme === 'light' ? '🌙' : theme === 'dark' ? '☀️' : '🌓'}
+      {resolvedTheme === 'light' ? '🌙' : resolvedTheme === 'dark' ? '☀️' : '🌓'}
     </button>
   );
 }
