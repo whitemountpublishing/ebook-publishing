@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import data from '../src/data/site-content.json';
 import HeroImg from '../assets/hero.png';
 import Image from 'next/image';
-import Link from 'next/link';
 import GetStartedButton from './get-started-button';
 import { ChatNowButton } from './chat-now-button';
 
