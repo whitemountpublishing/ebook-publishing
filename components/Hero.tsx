@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import data from '../src/data/site-content.json';
 import HeroImg from '../assets/hero.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
     const { hero } = data.pages.home;
@@ -101,9 +102,9 @@ export default function Hero() {
                             {hero.subtitle}
                         </p>
                         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                            <button className="btn btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1.1rem', backgroundColor: 'var(--accent)', color: 'var(--primary)', fontWeight: 800, minWidth: '200px' }}>
+                            <Link href="/contact-us" className="btn btn-primary" style={{ padding: '1.25rem 3rem', fontSize: '1.1rem', backgroundColor: 'var(--accent)', color: 'var(--primary)', fontWeight: 800, minWidth: '200px' }}>
                                 {hero.cta}
-                            </button>
+                            </Link>
                             <button className="btn" style={{
                                 padding: '1.25rem 3rem',
                                 fontSize: '1.1rem',
@@ -112,6 +113,10 @@ export default function Hero() {
                                 background: 'transparent',
                                 fontWeight: 700,
                                 minWidth: '200px'
+                            }} onClick={() => {
+                                if (typeof window !== 'undefined' && (window as any).LiveChatWidget) {
+                                    (window as any).LiveChatWidget.call('maximize');
+                                }
                             }}>
                                 Live Chat
                             </button>
