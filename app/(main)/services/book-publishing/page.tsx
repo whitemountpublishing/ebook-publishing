@@ -111,7 +111,7 @@ export default function BookPublishingPage() {
   return (
     <main className='bg-(--bg-main)'>
       {/* Hero Section */}
-      <section className='px-4 py-8 min-h-[75vh] flex items-center bg-(--primary) text-white relative'>
+      <section className='px-0 py-8 min-h-[75vh] flex items-center bg-(--primary) text-white relative'>
         <div className='absolute inset-0 z-0'>
           <Image src={BgImage} alt='Book Publishing' fill className='object-cover opacity-10 grayscale-100' priority />
           <div

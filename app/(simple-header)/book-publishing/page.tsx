@@ -9,6 +9,7 @@ import BookGallery from '@/components/BookGallery';
 import { FileSearch, FilePenLine, Palette, Globe } from 'lucide-react';
 import GetStartedButton from '@/components/get-started-button';
 import { ChatNowButton } from '@/components/chat-now-button';
+import { CallButton } from '@/components/call-button';
 
 export default function BookPublishingPage() {
   const serviceTitle = 'Experience Transforming Your Manuscript with Our Expert Book Publishing Services!';
@@ -111,7 +112,7 @@ export default function BookPublishingPage() {
   return (
     <main className='bg-(--bg-main)'>
       {/* Hero Section */}
-      <section className='px-4 py-8 min-h-screen flex items-center bg-(--primary) text-white relative'>
+      <section className='px-0 py-8 min-h-screen flex items-center bg-(--primary) text-white relative'>
         <div className='absolute inset-0 z-0'>
           <Image src={BgImage} alt='Book Publishing' fill className='object-cover opacity-10 grayscale-100' priority />
           <div
@@ -253,8 +254,9 @@ export default function BookPublishingPage() {
                 ))}
               </div>
 
-              <motion.div>
+              <motion.div className='flex items-stretch flex-col sm:flex-row justify-center gap-4 mt-8'>
                 <ChatNowButton className='bg-(--accent) border-(--accent)' label='Chat Now' />
+                <CallButton />
               </motion.div>
             </motion.div>
             <motion.div
@@ -384,8 +386,9 @@ export default function BookPublishingPage() {
               </motion.div>
             ))}
           </div>
-          <motion.div style={{ marginTop: '2rem' }}>
+          <motion.div className='flex items-stretch flex-col sm:flex-row justify-center gap-4 mt-8'>
             <ChatNowButton className='px-12 py-4 text-lg min-w-50 bg-(--accent) border-(--accent)' label='Chat Now' />
+            <CallButton />
           </motion.div>
         </div>
       </section>
