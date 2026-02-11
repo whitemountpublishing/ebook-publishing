@@ -6,7 +6,9 @@ import Logo from '../assets/logo.png';
 import LogoDark from '../assets/logo-dark.png';
 import { useTheme } from 'next-themes';
 import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
-export default function Footer() {
+import { socials } from '@/src/data/socials';
+
+export function AppFooter() {
   const { resolvedTheme } = useTheme();
   return (
     <footer className='bg-(--bg-secondary) border-t border-(--border) px-0 py-(--container-padding) relative overflow-hidden'>
@@ -22,12 +24,26 @@ export default function Footer() {
                 alt={data.brand.name}
                 height={60}
                 width={180}
-                style={{ objectFit: 'contain' }}
+                className='object-contain'
               />
             </Link>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', lineHeight: 1.7, maxWidth: '300px' }}>
+            <p className='text-(--text-muted) text-sm leading-relaxed max-w-70'>
               Leading the way in premium book publishing and ghostwriting services with a commitment to excellence.
             </p>
+            <div className='flex gap-4 mt-6'>
+              {socials.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-(--text-muted) hover:text-(--primary) transition-colors'
+                  aria-label={social.label}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
           </div>
           <div>
             <h4 className='mb-8 text-(--primary) font-bold' style={{ fontFamily: 'var(--font-serif)' }}>
@@ -37,7 +53,6 @@ export default function Footer() {
               <li>
                 <a href={`tel:${data.brand.contact.phone}`} className='flex items-center gap-2'>
                   <PhoneIcon stroke='#22c55e' size={16} />
-
                   {data.brand.contact.phone}
                 </a>
               </li>
@@ -56,29 +71,22 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4
-              style={{
-                marginBottom: '2rem',
-                color: 'var(--primary)',
-                fontFamily: 'var(--font-serif)',
-                fontWeight: 800,
-              }}
-            >
+            <h4 className='mb-8 text-(--primary) font-bold' style={{ fontFamily: 'var(--font-serif)' }}>
               Quick Links
             </h4>
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.95rem' }}>
+            <ul className='flex flex-col gap-4 text-sm'>
               <li>
-                <Link href='/' style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
+                <Link href='/' className='text-(--text-muted) transition-colors'>
                   Home
                 </Link>
               </li>
               <li>
-                <Link href='/about-us' style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
+                <Link href='/about-us' className='text-(--text-muted) transition-colors'>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href='/contact-us' style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
+                <Link href='/contact-us' className='text-(--text-muted) transition-colors'>
                   Contact Us
                 </Link>
               </li>
@@ -101,7 +109,7 @@ export default function Footer() {
                 ?.subItems?.slice(0, 5)
                 .map((item) => (
                   <li key={item.path}>
-                    <Link href={item.path} style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }}>
+                    <Link href={item.path} className='text-(--text-muted) transition-colors'>
                       {item.name}
                     </Link>
                   </li>
@@ -113,15 +121,21 @@ export default function Footer() {
           <p>
             &copy; {new Date().getFullYear()} {data.brand.name}. All Rights Reserved.
           </p>
-          <ul style={{ display: 'flex', gap: '2rem' }}>
+          <ul className='flex gap-8'>
             <li>
-              <Link href='/privacy-policy'>Privacy Policy</Link>
+              <Link href='/privacy-policy' className='text-(--text-muted) transition-colors'>
+                Privacy Policy
+              </Link>
             </li>
             <li>
-              <Link href='/terms-and-condition'>Terms & Conditions</Link>
+              <Link href='/terms-and-condition' className='text-(--text-muted) transition-colors'>
+                Terms & Conditions
+              </Link>
             </li>
             <li>
-              <Link href='/refund-policy'>Refund Policy</Link>
+              <Link href='/refund-policy' className='text-(--text-muted) transition-colors'>
+                Refund Policy
+              </Link>
             </li>
           </ul>
         </div>

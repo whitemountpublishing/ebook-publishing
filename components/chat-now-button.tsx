@@ -4,7 +4,7 @@ export function ChatNowButton({ className, label }: { className?: string; label?
   return (
     <button
       className={cn(
-        'px-6 py-3 rounded-lg text-lg border-2 border-white text-white bg-transparent font-bold',
+        'px-6 py-3 rounded-lg text-lg border-2 border-white text-white bg-transparent font-bold cursor-pointer',
         className,
       )}
       onClick={() => {

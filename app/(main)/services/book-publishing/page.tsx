@@ -1,13 +1,11 @@
 'use client';
-import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import BgImage from '../../../assets/process-bg.webp';
-import Section2Image from '../../../assets/exceptional-book.webp';
-import Pattern from '../../../assets/pattern-2.webp';
-import HeroForm from '../../../components/HeroForm';
-import BookGallery from '../../../components/BookGallery';
-import Link from 'next/link';
+import BgImage from '@/assets/process-bg.webp';
+import Section2Image from '@/assets/exceptional-book.webp';
+import Pattern from '@/assets/pattern-2.webp';
+import HeroForm from '@/components/HeroForm';
+import BookGallery from '@/components/BookGallery';
 import { FileSearch, FilePenLine, Palette, Globe } from 'lucide-react';
 import GetStartedButton from '@/components/get-started-button';
 import { ChatNowButton } from '@/components/chat-now-button';
@@ -111,46 +109,14 @@ export default function BookPublishingPage() {
   ];
 
   return (
-    <main style={{ backgroundColor: 'var(--bg-main)', minHeight: '100vh' }}>
+    <main className='bg-(--bg-main)'>
       {/* Hero Section */}
-      <section
-        className='section'
-        style={{
-          position: 'relative',
-          padding: 'clamp(5rem, 10vw, 8rem) 0 clamp(4rem, 8vw, 6rem)',
-          overflow: 'hidden',
-          backgroundColor: 'var(--primary)',
-          color: 'white',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: 0,
-          }}
-        >
-          <Image
-            src={BgImage}
-            alt='Book Publishing'
-            fill
-            style={{ objectFit: 'cover', opacity: 0.1, filter: 'grayscale(100%)' }}
-            priority
-          />
+      <section className='p-(--section-padding) min-h-[75vh] flex items-center bg-(--primary) text-white relative'>
+        <div className='absolute inset-0 z-0'>
+          <Image src={BgImage} alt='Book Publishing' fill className='object-cover opacity-10 grayscale-100' priority />
           <div
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundImage: `url(${Pattern.src})`,
-              backgroundSize: '600px',
-              opacity: 0.05,
-            }}
+            className='absolute inset-0 opacity-5'
+            style={{ backgroundImage: `url(${Pattern.src})`, backgroundSize: '600px' }}
           />
         </div>
 
@@ -484,9 +450,7 @@ export default function BookPublishingPage() {
             Every author&apos;s journey is important to us. We are dedicated to supporting you at every step. Join the
             community of successful authors who have trusted Whitemount.
           </p>
-          <button className='btn btn-primary' style={{ padding: '1.25rem 3.5rem', fontSize: '1.1rem', width: 'auto' }}>
-            Get Started with Publishing
-          </button>
+          <GetStartedButton label='Get Started with Publishing' className='px-14 py-4 text-lg' />
         </div>
       </section>
     </main>

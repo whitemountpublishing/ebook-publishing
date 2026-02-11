@@ -10,23 +10,14 @@ export default function ThemeToggle() {
     setTheme(newTheme);
   };
 
+  if (!resolvedTheme) {
+    return null;
+  }
+
   return (
     <button
       onClick={toggleTheme}
-      className='btn'
-      style={{
-        padding: '0.5rem',
-        borderRadius: '50%',
-        width: '40px',
-        height: '40px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'var(--bg-secondary)',
-        border: '1px solid var(--border)',
-        fontSize: '1.2rem',
-        cursor: 'pointer',
-      }}
+      className='rounded-full focus:outline-none transition-colors aspect-square border-2 border-(--border) bg-(--bg-secondary) text-(--text-main) hover:bg-(--bg-secondary-hover) focus:ring-2 focus:ring-(--primary) focus:ring-offset-2 w-10 h-10'
       aria-label='Toggle Theme'
     >
       {resolvedTheme === 'light' ? '🌙' : resolvedTheme === 'dark' ? '☀️' : '🌓'}

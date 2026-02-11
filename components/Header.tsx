@@ -8,6 +8,7 @@ import LogoDark from '../assets/logo-dark.png';
 import { useState } from 'react';
 import { useTheme } from 'next-themes';
 import { ChevronDownIcon, MailIcon, PhoneIcon, XIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,7 +82,7 @@ export default function Header() {
 
             {/* Hamburger Menu */}
             <button
-              className={`hamburger ${isOpen ? 'active' : ''}`}
+              className={cn('hamburger', { active: isOpen })}
               onClick={() => setIsOpen(!isOpen)}
               aria-label='Toggle Menu'
             >
