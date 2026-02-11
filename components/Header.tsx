@@ -1,10 +1,10 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import data from '../src/data/site-content.json';
+import data from '@/src/data/site-content.json';
 import ThemeToggle from './ThemeToggle';
-import Logo from '../assets/logo.png';
-import LogoDark from '../assets/logo-dark.png';
+import Logo from '@/assets/logo.png';
+import LogoDark from '@/assets/logo-dark.png';
 import { useState } from 'react';
 import { useTheme } from 'next-themes';
 import { ChevronDownIcon, MailIcon, PhoneIcon, XIcon } from 'lucide-react';

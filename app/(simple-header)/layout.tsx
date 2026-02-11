@@ -1,4 +1,5 @@
 import { AppFooter } from '@/components/app-footer';
+import { SimpleHeader } from '@/components/simple-header';
 import React from 'react';
 
 export default function MainLayout({
@@ -8,6 +9,7 @@ export default function MainLayout({
 }>) {
   return (
     <React.Fragment>
+      <SimpleHeader />
       {children}
       <AppFooter />
     </React.Fragment>
