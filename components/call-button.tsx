@@ -11,13 +11,7 @@ interface CallButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> 
   showIcon?: boolean;
 }
 
-export function CallButton({
-  className,
-  variant = 'solid',
-  label = data.brand.contact.phone,
-  showIcon = true,
-  ...props
-}: CallButtonProps) {
+export function CallButton({ className, variant = 'solid', label, showIcon = true, ...props }: CallButtonProps) {
   const variants = {
     solid: 'bg-(--primary) text-white! border-2 border-(--primary) hover:bg-transparent hover:text-(--primary)!',
     outline: 'bg-transparent text-(--primary) border-2 border-(--primary) hover:bg-(--primary) hover:text-white!',
@@ -35,7 +29,7 @@ export function CallButton({
       {...props}
     >
       {showIcon && <PhoneIcon size={16} />}
-      <span>{label}</span>
+      <span>{label ? label : `Call Us: (332) 322-0608`}</span>
     </a>
   );
 }

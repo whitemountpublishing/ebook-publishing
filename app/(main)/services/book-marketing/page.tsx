@@ -1,11 +1,11 @@
 'use client';
-import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import BgImage from '@/assets/marketing.png';
 import Pattern from '@/assets/pattern-2.webp';
 import HeroForm from '@/components/HeroForm';
 import BookGallery from '@/components/BookGallery';
+import data from '@/src/data/site-content.json';
 
 export default function BookMarketingPage() {
   const serviceTitle = 'Marketing That Turns Pages & Profits';
@@ -358,7 +358,7 @@ export default function BookMarketingPage() {
                 Get Started Today
               </a>
               <a
-                href='tel:+18001234567'
+                href={`tel:${data.brand.contact.phone}`}
                 className='btn btn-outline'
                 style={{ padding: '1rem 2.5rem', fontSize: '1rem' }}
               >

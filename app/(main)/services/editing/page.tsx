@@ -6,6 +6,7 @@ import BgImage from '@/assets/exceptional-book.webp';
 import Pattern from '@/assets/pattern-2.webp';
 import HeroForm from '@/components/HeroForm';
 import BookGallery from '@/components/BookGallery';
+import data from '@/src/data/site-content.json';
 
 export default function EditingPage() {
   const serviceTitle = 'Professional Book Editing';
@@ -414,7 +415,7 @@ export default function EditingPage() {
                 Get Started
               </a>
               <a
-                href='tel:+18001234567'
+                href={`tel:${data.brand.contact.phone}`}
                 className='btn btn-outline'
                 style={{ padding: '1rem 2.5rem', fontSize: '1rem' }}
               >

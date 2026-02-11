@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import data from '@/src/data/site-content.json';
 
 export function ContactForm({ className }: { className?: string }) {
   const router = useRouter();
@@ -186,7 +187,7 @@ export function ContactForm({ className }: { className?: string }) {
               name='phone'
               value={formData.phone}
               onChange={handleChange}
-              placeholder='+1 234 567 890'
+              placeholder={`(Optional) ${data.brand.contact.phone}`}
               style={inputStyles}
             />
           </div>
