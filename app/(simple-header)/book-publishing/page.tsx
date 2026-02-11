@@ -254,7 +254,7 @@ export default function BookPublishingPage() {
                 ))}
               </div>
 
-              <motion.div className='flex items-stretch flex-col sm:flex-row justify-center gap-4 mt-8'>
+              <motion.div className='flex items-stretch flex-col sm:flex-row  gap-4 mt-8'>
                 <ChatNowButton className='bg-(--accent) border-(--accent)' label='Chat Now' />
                 <CallButton />
               </motion.div>

@@ -13,13 +13,13 @@ interface CallButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> 
 
 export function CallButton({
   className,
-  variant = 'outline',
+  variant = 'solid',
   label = data.brand.contact.phone,
   showIcon = true,
   ...props
 }: CallButtonProps) {
   const variants = {
-    solid: 'bg-(--primary) text-white border-2 border-(--primary) hover:bg-transparent hover:text-(--primary)',
+    solid: 'bg-(--primary) text-white! border-2 border-(--primary) hover:bg-transparent hover:text-(--primary)!',
     outline: 'bg-transparent text-(--primary) border-2 border-(--primary) hover:bg-(--primary) hover:text-white!',
     ghost: 'bg-transparent text-(--primary) hover:bg-(--primary)/10',
   };
