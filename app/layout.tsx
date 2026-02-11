@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'White Mount Publishing',
+  title: 'Whitemount  Publishing',
   description: 'Diverse Stories, One Community',
   icons: [
     {

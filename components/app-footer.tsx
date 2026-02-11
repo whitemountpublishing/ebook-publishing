@@ -7,6 +7,7 @@ import LogoDark from '../assets/logo-dark.png';
 import { useTheme } from 'next-themes';
 import { MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
 import { socials } from '@/src/data/socials';
+import TrustPilotImage from '@/assets/trustpilot.png';
 
 export function AppFooter() {
   const { resolvedTheme } = useTheme();
@@ -43,6 +44,17 @@ export function AppFooter() {
                   {social.icon}
                 </a>
               ))}
+            </div>
+            <div className='mt-8 flex items-center gap-4 text-sm font-medium'>
+              <a
+                href='https://www.trustpilot.com/review/whitemountpublishing.com'
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label='Trustpilot Reviews'
+                className='flex items-center gap-2 hover:opacity-80 transition-opacity'
+              >
+                <Image src={TrustPilotImage} alt='Trustpilot Reviews' height={50} className='object-contain' />
+              </a>
             </div>
           </div>
           <div>

@@ -66,7 +66,7 @@ I have successfully replicated the design aesthetic of the target publishing sit
 - **Refined Hamburger UI**: Improved the line-to-X transformation with better origins and spacing, plus interactive hover states.
 - **Interactive Overlay**: Updated the content overlay to utilize a subtle blur, increasing focus on the navigation while the menu is active.
 
-### 🎯 Reference-Style Navbar (White MountPublishers)
+### 🎯 Reference-Style Navbar (Whitemount Publishers)
 
 - **Top Contact Bar**: Added a dark green bar with email and phone links, visible on desktop.
 - **Main Header**: Sticky navigation with logo, centered nav links, and "Call Now" CTA.

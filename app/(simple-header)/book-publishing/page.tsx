@@ -10,6 +10,7 @@ import { FileSearch, FilePenLine, Palette, Globe } from 'lucide-react';
 import GetStartedButton from '@/components/get-started-button';
 import { ChatNowButton } from '@/components/chat-now-button';
 import { CallButton } from '@/components/call-button';
+import TrustPilotImage from '@/assets/trustpilot.png';
 
 export default function BookPublishingPage() {
   const serviceTitle = 'Experience Transforming Your Manuscript with Our Expert Book Publishing Services!';
