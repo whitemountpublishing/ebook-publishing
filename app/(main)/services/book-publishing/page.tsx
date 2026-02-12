@@ -429,7 +429,7 @@ export default function BookPublishingPage() {
                   {t.quote}
                 </p>
                 <h4 style={{ color: 'var(--primary)', fontFamily: 'var(--font-serif)', fontSize: '1.1rem' }}>
-                  — {t.author}
+                  {t.author}
                 </h4>
               </motion.div>
             ))}

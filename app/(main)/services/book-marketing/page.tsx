@@ -48,7 +48,7 @@ export default function BookMarketingPage() {
       step: '01',
       title: 'Marketing Consultation',
       description:
-        "We conduct in-depth interviews to understand your marketing objectives—whether it's building fame, establishing credibility, driving revenue, or achieving bestseller status.",
+        'We conduct in-depth consultations to understand your marketing objectives, target audience, and unique selling points, ensuring our strategies align perfectly with your goals.',
     },
     {
       step: '02',
@@ -83,7 +83,7 @@ export default function BookMarketingPage() {
     {
       icon: '🚀',
       title: 'Best-Seller Dreams',
-      description: 'From unknown to unforgettable—we fuel your fame and fortune.',
+      description: 'From unknown to unforgettable, we fuel your fame and fortune.',
     },
   ];
 
@@ -351,7 +351,7 @@ export default function BookMarketingPage() {
               Ready to Write Your Legacy?
             </h2>
             <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 2rem' }}>
-              From unknown to unforgettable—let us fuel your fame, fortune, and best-seller dreams!
+              From unknown to unforgettable, let us fuel your fame, fortune, and best-seller dreams!
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href='/contact-us' className='btn btn-primary' style={{ padding: '1rem 2.5rem', fontSize: '1rem' }}>

@@ -90,7 +90,7 @@ export default function Testimonials() {
                       {review.text}
                     </p>
                     <div className='border-t border-(--border) pt-6 text-[1rem] font-extrabold tracking-[0.5px] text-(--text-muted) '>
-                      — {review.name}
+                      {review.name}
                     </div>
                   </div>
                 </div>
@@ -101,14 +101,14 @@ export default function Testimonials() {
           {/* Navigation Buttons */}
           <button
             onClick={prevStep}
-            className='absolute left-[-10px] top-1/2 z-10 flex h-[52px] w-[52px] -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg-main)] text-[1.4rem] text-[var(--primary)] shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-200 ease-out hover:shadow-[0_8px_20px_rgba(0,0,0,0.14)] dark:border-[var(--border-dark)] dark:bg-[var(--bg-main-dark)] dark:text-[var(--primary-light)] dark:shadow-[0_4px_15px_rgba(255,255,255,0.1)] dark:hover:shadow-[0_8px_20px_rgba(255,255,255,0.14)]'
+            className='absolute -left-2.5 top-1/2 z-10 flex h-13 w-13 -translate-y-1/2 items-center justify-center rounded-full border border-(--border) bg-(--bg-main) text-[1.4rem] text-(--primary) shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-200 ease-out hover:shadow-[0_8px_20px_rgba(0,0,0,0.14)] dark:border-(--border-dark) dark:bg-(--bg-main-dark) dark:text-(--primary-light) dark:shadow-[0_4px_15px_rgba(255,255,255,0.1)] dark:hover:shadow-[0_8px_20px_rgba(255,255,255,0.14)]'
             aria-label='Previous testimonials'
           >
             <ArrowLeftIcon className='h-5 w-5' />
           </button>
           <button
             onClick={nextStep}
-            className='absolute right-[-10px] top-1/2 z-10 flex h-[52px] w-[52px] -translate-y-1/2 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg-main)] text-[1.4rem] text-[var(--primary)] shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-200 ease-out hover:shadow-[0_8px_20px_rgba(0,0,0,0.14)] dark:border-[var(--border-dark)] dark:bg-[var(--bg-main-dark)] dark:text-[var(--primary-light)] dark:shadow-[0_4px_15px_rgba(255,255,255,0.1)] dark:hover:shadow-[0_8px_20px_rgba(255,255,255,0.14)]'
+            className='absolute -right-2.5 top-1/2 z-10 flex h-13 w-13 -translate-y-1/2 items-center justify-center rounded-full border border-(--border) bg-(--bg-main) text-[1.4rem] text-(--primary) shadow-[0_4px_15px_rgba(0,0,0,0.1)] transition-all duration-200 ease-out hover:shadow-[0_8px_20px_rgba(0,0,0,0.14)] dark:border-(--border-dark) dark:bg-(--bg-main-dark) dark:text-(--primary-light) dark:shadow-[0_4px_15px_rgba(255,255,255,0.1)] dark:hover:shadow-[0_8px_20px_rgba(255,255,255,0.14)]'
             aria-label='Next testimonials'
           >
             <ArrowLeftIcon className='h-5 w-5 rotate-180' />

@@ -256,8 +256,8 @@ export default function EditingPage() {
               Editing Tailored to Your Needs
             </h2>
             <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '700px', margin: '0 auto' }}>
-              We provide outstanding services to ensure your book ends up looking flawless—a masterpiece that impresses
-              a vast audience.
+              We provide outstanding services to ensure your book ends up looking like a masterpiece that impresses a
+              vast audience.
             </p>
           </motion.div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>

@@ -15,7 +15,7 @@ import BookGallery from '@/components/BookGallery';
 export default function BookCoverDesignPage() {
   const serviceTitle = 'Attractive cover designs to gain attention from potential readers';
   const serviceSubtitle =
-    'Bring life to your book project with our artistic creative skill set. The importance of a good book cover cannot be understated—it can make or break your book.';
+    'Bring life to your book project with our artistic creative skill set. The importance of a good book cover cannot be understated, it can make or break your book.';
 
   const designProcesses = [
     {
@@ -199,7 +199,7 @@ export default function BookCoverDesignPage() {
               <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '2rem' }}>
                 A book&apos;s identity and essence are conveyed through the cover. It&apos;s the first thing readers see
                 and plays a pivotal role in their decision to explore further. Our designers craft covers that
-                don&apos;t just protect—they perform.
+                don&apos;t just protect, they perform.
               </p>
               <div
                 style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem' }}
