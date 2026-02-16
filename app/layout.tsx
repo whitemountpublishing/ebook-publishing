@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeToggle';
 import { HeaderScripts } from '@/components/header-scripts';
+import LandingTracker from '@/components/landing-tracker';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -40,6 +41,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <HeaderScripts />
+        <LandingTracker />
         <ThemeProvider attribute='class' defaultTheme='light' disableTransitionOnChange enableColorScheme>
           {children}
         </ThemeProvider>

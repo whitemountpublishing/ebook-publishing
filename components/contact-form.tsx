@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import data from '@/src/data/site-content.json';
+import { prepareTrackingData } from '@/lib/tracked-fetch';
 
 export function ContactForm({ className }: { className?: string }) {
   const router = useRouter();
@@ -23,7 +24,7 @@ export function ContactForm({ className }: { className?: string }) {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('loading');
 
@@ -31,7 +32,7 @@ export function ContactForm({ className }: { className?: string }) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({...formData, trackingData: prepareTrackingData()}),
       });
 
       if (res.ok) {
