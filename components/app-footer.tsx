@@ -1,4 +1,5 @@
 'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import data from '../src/data/site-content.json';
@@ -11,13 +12,11 @@ import TrustPilotImage from '@/assets/trustpilot.png';
 
 export function AppFooter() {
   const { resolvedTheme } = useTheme();
+
   return (
     <footer className='bg-(--bg-secondary) border-t border-(--border) px-0 py-(--container-padding) relative overflow-hidden'>
-      <div className='container'>
-        <div
-          className='grid grid-4 mb-16 gap-12'
-          style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}
-        >
+      <div className='container space-y-4'>
+        <div className='grid grid-4 gap-12' style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
           <div>
             <Link href='/' className='inline-block mb-8'>
               <Image
@@ -129,10 +128,10 @@ export function AppFooter() {
             </ul>
           </div>
         </div>
-        <div className='border-t border-(--border) pt-10 flex justify-between items-center wrap gap-6 text-(--text-muted) text-sm'>
-          <p>
-            &copy; {new Date().getFullYear()} {data.brand.name}. All Rights Reserved.
-          </p>
+
+        <hr className='border-t border-(--border)' />
+
+        <div className='flex flex-col items-center gap-6 text-(--text-muted) text-sm'>
           <ul className='flex gap-8'>
             <li>
               <Link href='/privacy-policy' className='text-(--text-muted) transition-colors'>
@@ -150,6 +149,9 @@ export function AppFooter() {
               </Link>
             </li>
           </ul>
+          <p className='px-4 py-2 text-sm'>
+            &copy; {new Date().getFullYear()} {data.brand.name}. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
